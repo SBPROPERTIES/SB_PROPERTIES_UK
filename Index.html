@@ -1,0 +1,627 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SB Properties UK | Sell Your Home Fast in Glasgow & Central Scotland</title>
+    <meta name="description" content="We buy residential properties off-market directly from homeowners in Glasgow and Central Scotland. Fast cash offers, no fees, no hassle.">
+
+    <style>
+        /* ==========================================================================
+           EDITING GUIDE
+           ==========================================================================
+           1. COLOURS: Change the hex codes in the :root section below.
+           2. LOGO: Save your logo image as 'logo.webp' in the same folder as this file, 
+              or update the src="logo.webp" line in the HTML body.
+           3. IMAGES: This design uses CSS gradients, so no external hero images are needed.
+           4. PHONE/EMAIL: Search for "07123 456 789" or "info@sbproperties.uk" to update.
+        */
+
+        :root {
+            /* BRAND COLOURS */
+            --primary: #7AC943;       /* Brand Green */
+            --primary-dark: #65a636;  /* Darker green for hover states */
+            --black: #000000;
+            --dark-grey: #1a1a1a;
+            --light-grey: #F5F5F5;
+            --white: #FFFFFF;
+            --text-color: #333333;
+            
+            /* SPACING & LAYOUT */
+            --container-width: 1100px;
+            --section-padding: 80px 20px;
+            --border-radius: 8px;
+        }
+
+        /* RESET & BASE STYLES */
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        
+        body {
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            color: var(--text-color);
+            line-height: 1.6;
+            background-color: var(--white);
+            scroll-behavior: smooth; /* Enables smooth scrolling */
+        }
+
+        h1, h2, h3, h4 {
+            font-weight: 700;
+            line-height: 1.2;
+            margin-bottom: 1rem;
+            color: var(--black);
+        }
+
+        p { margin-bottom: 1.5rem; }
+        
+        a { text-decoration: none; transition: 0.3s ease; }
+        ul { list-style: none; }
+
+        /* UTILITIES */
+        .container {
+            max-width: var(--container-width);
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .text-center { text-align: center; }
+        .text-primary { color: var(--primary); }
+        .bg-light { background-color: var(--light-grey); }
+        .bg-black { background-color: var(--black); color: var(--white); }
+
+        /* BUTTONS */
+        .btn {
+            display: inline-block;
+            padding: 14px 32px;
+            border-radius: var(--border-radius);
+            font-weight: 600;
+            text-align: center;
+            cursor: pointer;
+            font-size: 1rem;
+            border: none;
+        }
+
+        .btn-primary {
+            background-color: var(--primary);
+            color: var(--white);
+        }
+        
+        .btn-primary:hover {
+            background-color: var(--primary-dark);
+            transform: translateY(-2px);
+        }
+
+        .btn-outline {
+            background-color: transparent;
+            border: 2px solid var(--primary);
+            color: var(--primary);
+        }
+
+        .btn-outline:hover {
+            background-color: var(--primary);
+            color: var(--white);
+        }
+
+        .btn-full-width { width: 100%; }
+
+        /* HEADER / NAV */
+        header {
+            background: var(--white);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            padding: 15px 0;
+        }
+
+        .nav-flex {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 800;
+            color: var(--black);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .logo img {
+            height: 50px;
+            width: auto;
+        }
+
+        .header-actions {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .phone-link {
+            color: var(--black);
+            font-weight: 600;
+            display: none; /* Hidden on very small mobile, visible on desktop */
+        }
+
+        @media (min-width: 600px) {
+            .phone-link { display: block; }
+        }
+
+        /* HERO SECTION */
+        .hero {
+            /* Modern dark gradient background */
+            background: linear-gradient(135deg, var(--black) 0%, var(--dark-grey) 100%);
+            color: var(--white);
+            padding: 100px 20px;
+            text-align: center;
+        }
+
+        .hero h1 {
+            color: var(--white);
+            font-size: 2.5rem;
+            max-width: 800px;
+            margin: 0 auto 20px;
+        }
+
+        .hero .sub-headline {
+            font-size: 1.2rem;
+            color: #cccccc;
+            margin-bottom: 30px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .location-tag {
+            display: inline-block;
+            background: rgba(255,255,255,0.1);
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            margin-bottom: 20px;
+            color: var(--primary);
+        }
+
+        @media (min-width: 768px) {
+            .hero h1 { font-size: 3.5rem; }
+        }
+
+        /* SECTION STYLES */
+        .section-title {
+            font-size: 2rem;
+            text-align: center;
+            margin-bottom: 10px;
+        }
+
+        .section-subtitle {
+            text-align: center;
+            color: #666;
+            margin-bottom: 50px;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* HOW IT WORKS (STEPS) */
+        .steps-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 30px;
+        }
+
+        .step-card {
+            background: var(--white);
+            border: 1px solid #eee;
+            padding: 30px;
+            border-radius: var(--border-radius);
+            position: relative;
+            transition: transform 0.2s;
+        }
+
+        .step-card:hover { transform: translateY(-5px); box-shadow: 0 10px 20px rgba(0,0,0,0.05); }
+
+        .step-number {
+            background: var(--primary);
+            color: var(--white);
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            margin-bottom: 20px;
+            font-size: 1.2rem;
+        }
+
+        /* WHY CHOOSE US (BENEFITS) */
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 20px;
+        }
+
+        .benefit-item {
+            display: flex;
+            gap: 15px;
+            align-items: flex-start;
+        }
+
+        .check-icon {
+            color: var(--primary);
+            font-weight: bold;
+            font-size: 1.2rem;
+            flex-shrink: 0; /* Prevents shrinking */
+        }
+
+        /* DEAL SOURCERS */
+        .sourcer-box {
+            background: var(--light-grey);
+            border-left: 5px solid var(--primary);
+            padding: 40px;
+            border-radius: 4px;
+        }
+
+        /* TESTIMONIALS */
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 30px;
+        }
+
+        .testimonial-card {
+            background: var(--white);
+            padding: 30px;
+            border-radius: var(--border-radius);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            font-style: italic;
+        }
+
+        .author {
+            font-style: normal;
+            font-weight: bold;
+            margin-top: 15px;
+            display: block;
+            color: var(--primary);
+        }
+
+        /* FAQ */
+        details {
+            background: var(--white);
+            margin-bottom: 15px;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 15px;
+        }
+
+        summary {
+            cursor: pointer;
+            font-weight: 600;
+            list-style: none;
+            font-size: 1.1rem;
+            position: relative;
+            padding-right: 30px;
+        }
+        
+        summary::-webkit-details-marker { display: none; }
+        
+        summary::after {
+            content: '+';
+            position: absolute;
+            right: 0;
+            color: var(--primary);
+            font-weight: bold;
+            font-size: 1.5rem;
+            line-height: 1rem;
+        }
+
+        details[open] summary::after { content: '-'; }
+
+        details p { margin-top: 15px; color: #555; }
+
+        /* CONTACT SECTION */
+        .contact-container {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 50px;
+        }
+
+        .contact-info h3 { margin-top: 0; }
+        
+        .social-links {
+            margin-top: 20px;
+            display: flex;
+            gap: 15px;
+        }
+
+        .social-links a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            background: var(--light-grey);
+            border-radius: 50%;
+            color: var(--black);
+        }
+
+        .social-links a:hover { background: var(--primary); color: var(--white); }
+
+        /* FORM */
+        .form-group { margin-bottom: 20px; }
+        
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 600;
+            font-size: 0.9rem;
+        }
+
+        input, textarea, select {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-family: inherit;
+            font-size: 1rem;
+        }
+
+        input:focus, textarea:focus {
+            outline: none;
+            border-color: var(--primary);
+            box-shadow: 0 0 0 3px rgba(122, 201, 67, 0.2);
+        }
+
+        /* FOOTER */
+        footer {
+            background: var(--black);
+            color: #999;
+            padding: 40px 0;
+            text-align: center;
+            font-size: 0.9rem;
+        }
+        
+        footer a { color: #ccc; margin: 0 10px; }
+        footer a:hover { color: var(--primary); }
+
+        /* RESPONSIVE GRID ADJUSTMENTS */
+        @media (min-width: 768px) {
+            .steps-grid { grid-template-columns: repeat(4, 1fr); }
+            .benefits-grid { grid-template-columns: repeat(2, 1fr); }
+            .testimonials-grid { grid-template-columns: repeat(2, 1fr); }
+            .contact-container { grid-template-columns: 1fr 1fr; }
+            .sourcer-flex { display: flex; align-items: center; justify-content: space-between; }
+            .sourcer-text { flex: 1; margin-right: 40px; }
+            .sourcer-box { text-align: left; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container nav-flex">
+            <a href="#" class="logo">
+                <img src="logo.webp" alt="SB Properties UK Logo">
+                <span>SB Properties</span>
+            </a>
+            <div class="header-actions">
+                <a href="tel:07123456789" class="phone-link">07123 456 789</a>
+                <a href="#contact" class="btn btn-primary">Get Offer</a>
+            </div>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <span class="location-tag">Buying Homes Across Glasgow & Central Scotland</span>
+            <h1>Sell Your Home Fast. No Fees. No Hassle.</h1>
+            <p class="sub-headline">
+                We buy residential properties off-market directly from homeowners. 
+                Skip the estate agents and get a fast, fair cash offer in any condition.
+            </p>
+            <div style="display: flex; gap: 15px; justify-content: center; flex-wrap: wrap;">
+                <a href="#contact" class="btn btn-primary">Get Your Free Cash Offer</a>
+                <a href="#how-it-works" class="btn btn-outline" style="color:white; border-color:white;">How it Works</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="how-it-works" style="padding: var(--section-padding);">
+        <div class="container">
+            <h2 class="section-title">How It Works</h2>
+            <p class="section-subtitle">We've simplified the selling process into 4 easy steps.</p>
+            
+            <div class="steps-grid">
+                <div class="step-card">
+                    <div class="step-number">1</div>
+                    <h3>Contact Us</h3>
+                    <p>Fill in our simple form or give us a call. Tell us a little about the property.</p>
+                </div>
+                <div class="step-card">
+                    <div class="step-number">2</div>
+                    <h3>Quick Chat</h3>
+                    <p>We’ll review the details and arrange a quick, informal chat or viewing.</p>
+                </div>
+                <div class="step-card">
+                    <div class="step-number">3</div>
+                    <h3>Cash Offer</h3>
+                    <p>We provide a fair, no-obligation cash offer tailored to your timeline.</p>
+                </div>
+                <div class="step-card">
+                    <div class="step-number">4</div>
+                    <h3>Sold</h3>
+                    <p>If you accept, we handle the paperwork and you get paid on completion.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="bg-light" style="padding: var(--section-padding);">
+        <div class="container">
+            <div class="contact-container"> <div>
+                    <h2 style="margin-bottom: 20px;">About SB Properties UK</h2>
+                    <p><strong>We are local property experts based in Scotland.</strong></p>
+                    <p>Unlike traditional estate agents, we don't list your house and wait for a buyer—we <em>are</em> the buyers. We specialize in helping homeowners in Glasgow and Central Scotland sell their properties quickly, regardless of the condition.</p>
+                    <p>Whether you are facing financial difficulties, inherited a property, or just want a hassle-free sale, we provide a confidential and professional service you can trust.</p>
+                </div>
+
+                <div>
+                    <h3 style="margin-bottom: 20px;">Why Sell To Us?</h3>
+                    <div class="benefits-grid">
+                        <div class="benefit-item">
+                            <span class="check-icon">✓</span>
+                            <div><strong>Fast Completion</strong><br><small>We work to your timeline.</small></div>
+                        </div>
+                        <div class="benefit-item">
+                            <span class="check-icon">✓</span>
+                            <div><strong>No Agent Fees</strong><br><small>Keep 100% of the offer price.</small></div>
+                        </div>
+                        <div class="benefit-item">
+                            <span class="check-icon">✓</span>
+                            <div><strong>Any Condition</strong><br><small>Repairs needed? No problem.</small></div>
+                        </div>
+                        <div class="benefit-item">
+                            <span class="check-icon">✓</span>
+                            <div><strong>Confidential</strong><br><small>No "For Sale" signs needed.</small></div>
+                        </div>
+                        <div class="benefit-item">
+                            <span class="check-icon">✓</span>
+                            <div><strong>Local Experts</strong><br><small>We know the Glasgow market.</small></div>
+                        </div>
+                        <div class="benefit-item">
+                            <span class="check-icon">✓</span>
+                            <div><strong>Guaranteed Offer</strong><br><small>No chain breaks or delays.</small></div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section style="padding: var(--section-padding);">
+        <div class="container">
+            <div class="sourcer-box">
+                <div class="sourcer-flex">
+                    <div class="sourcer-text">
+                        <h3>Are you a Property Sourcer?</h3>
+                        <p style="margin-bottom: 0;">We are always looking for off-market deals in Glasgow and Central Scotland. If you have leads or deals that need a reliable buyer, get in touch.</p>
+                    </div>
+                    <div style="margin-top: 20px;">
+                        <a href="mailto:info@sbproperties.uk?subject=Deal%20Sourcer%20Introduction" class="btn btn-primary">Partner With Us</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="bg-light" style="padding: var(--section-padding);">
+        <div class="container">
+            <h2 class="section-title">What People Say</h2>
+            <p class="section-subtitle">Honest feedback from local homeowners.</p>
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <p>"I needed to sell my flat quickly due to a relocation. SB Properties made me a fair offer and we completed in just 3 weeks. So much easier than an estate agent."</p>
+                    <span class="author">- Sarah M., Glasgow</span>
+                </div>
+                <div class="testimonial-card">
+                    <p>"The house needed a lot of work and I didn't have the money to fix it up. They bought it as-is, and the process was completely stress-free."</p>
+                    <span class="author">- David R., Paisley</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section style="padding: var(--section-padding);">
+        <div class="container" style="max-width: 800px;">
+            <h2 class="section-title">Frequently Asked Questions</h2>
+            <div style="margin-top: 40px;">
+                <details>
+                    <summary>How quickly can you buy my house?</summary>
+                    <p>We can move as fast as you need. In many cases, we can exchange contracts within 7-28 days, depending on the solicitors.</p>
+                </details>
+                <details>
+                    <summary>Do you charge any fees?</summary>
+                    <p>No. Unlike estate agents who charge a percentage commission, we charge zero fees. The cash offer we make is the amount you receive.</p>
+                </details>
+                <details>
+                    <summary>My house needs major repairs, will you still buy it?</summary>
+                    <p>Yes. We buy properties in any condition—whether it’s damp, dated, or structurally damaged. You don't need to decorate or fix anything.</p>
+                </details>
+                <details>
+                    <summary>Is the offer obligated?</summary>
+                    <p>No, our cash offers are 100% no-obligation. You are free to accept or decline.</p>
+                </details>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="bg-black" style="padding: var(--section-padding); color: white;">
+        <div class="container">
+            <div class="contact-container">
+                
+                <div class="contact-info">
+                    <h2 style="color: white;">Get Your Free Offer</h2>
+                    <p style="color: #ccc;">Fill in the form, and we’ll get back to you within 24 hours. No hard sell, just a friendly chat.</p>
+                    
+                    <div style="margin-top: 30px;">
+                        <p><strong>Email:</strong><br> <a href="mailto:info@sbproperties.uk" style="color: var(--primary);">info@sbproperties.uk</a></p>
+                        <p><strong>Phone:</strong><br> <a href="tel:07123456789" style="color: var(--primary);">07123 456 789</a></p>
+                        <p><strong>Location:</strong><br> Glasgow & Central Scotland</p>
+                    </div>
+
+                    <div class="social-links">
+                        <a href="https://www.instagram.com/sbproperties.uk?igsh=MWRvNWh0ZXk4MHVubA==" target="_blank" title="Instagram">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+                        </a>
+                    </div>
+                </div>
+
+                <div style="background: white; padding: 30px; border-radius: 8px; color: var(--text-color);">
+                    <form action="https://formspree.io/f/mwpyrrke" method="POST">
+                        <div class="form-group">
+                            <label for="name">Name</label>
+                            <input type="text" id="name" name="name" placeholder="Your Name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Phone Number</label>
+                            <input type="tel" id="phone" name="phone" placeholder="07123 456 789" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="postcode">Property Postcode</label>
+                            <input type="text" id="postcode" name="postcode" placeholder="e.g. G1 1AB">
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Any details? (Optional)</label>
+                            <textarea id="message" name="message" rows="4" placeholder="Tell us about the property..."></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-full-width">Request Call Back</button>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 SB Properties UK. All rights reserved.</p>
+            <div style="margin-top: 10px;">
+                <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>
