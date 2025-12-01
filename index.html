@@ -621,7 +621,7 @@ document.getElementById("leadForm").addEventListener("submit", function(e) {
     };
 
     // ⭐ SEND DATA TO YOUR N8N WEBHOOK (ADD YOUR OWN URL BELOW)
-    fetch("http://16.171.159.154:5678/webhook/sb-property-lead", {
+    fetch("http://16.171.159.154:5678/webhook-test/sb-property-lead", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(payload)
