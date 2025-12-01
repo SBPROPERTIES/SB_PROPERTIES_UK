@@ -558,52 +558,78 @@
         </div>
     </section>
 
-    <section id="contact" class="bg-black" style="padding: var(--section-padding); color: white;">
-        <div class="container">
-            <div class="contact-container">
+<section id="contact" class="bg-black" style="padding: var(--section-padding); color: white;">
+    <div class="container">
+        <div class="contact-container">
+            
+            <div class="contact-info">
+                <h2 style="color: white;">Get Your Free Offer</h2>
+                <p style="color: #ccc;">Fill in the form, and we’ll get back to you within 24 hours. No hard sell, just a friendly chat.</p>
                 
-                <div class="contact-info">
-                    <h2 style="color: white;">Get Your Free Offer</h2>
-                    <p style="color: #ccc;">Fill in the form, and we’ll get back to you within 24 hours. No hard sell, just a friendly chat.</p>
-                    
-                    <div style="margin-top: 30px;">
-                        <p><strong>Email:</strong><br> <a href="mailto:info@sbproperties.uk" style="color: var(--primary);">info@sbproperties.uk</a></p>
-                        <p><strong>Phone:</strong><br> <a href="tel:07123456789" style="color: var(--primary);">07123 456 789</a></p>
-                        <p><strong>Location:</strong><br> Glasgow & Central Scotland</p>
-                    </div>
-
-                    <div class="social-links">
-                        <a href="https://www.instagram.com/sbproperties.uk?igsh=MWRvNWh0ZXk4MHVubA==" target="_blank" title="Instagram">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
-                        </a>
-                    </div>
+                <div style="margin-top: 30px;">
+                    <p><strong>Email:</strong><br> <a href="mailto:info@sbproperties.uk" style="color: var(--primary);">info@sbproperties.uk</a></p>
+                    <p><strong>Phone:</strong><br> <a href="tel:07123456789" style="color: var(--primary);">07123 456 789</a></p>
+                    <p><strong>Location:</strong><br> Glasgow & Central Scotland</p>
                 </div>
 
-                <div style="background: white; padding: 30px; border-radius: 8px; color: var(--text-color);">
-                    <form action="https://formspree.io/f/mwpyrrke" method="POST">
-                        <div class="form-group">
-                            <label for="name">Name</label>
-                            <input type="text" id="name" name="name" placeholder="Your Name" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="phone">Phone Number</label>
-                            <input type="tel" id="phone" name="phone" placeholder="07123 456 789" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="postcode">Property Postcode</label>
-                            <input type="text" id="postcode" name="postcode" placeholder="e.g. G1 1AB">
-                        </div>
-                        <div class="form-group">
-                            <label for="message">Any details? (Optional)</label>
-                            <textarea id="message" name="message" rows="4" placeholder="Tell us about the property..."></textarea>
-                        </div>
-                        <button type="submit" class="btn btn-primary btn-full-width">Request Call Back</button>
-                    </form>
+                <div class="social-links">
+                    <a href="https://www.instagram.com/sbproperties.uk?igsh=MWRvNWh0ZXk4MHVubA==" target="_blank" title="Instagram">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+                    </a>
                 </div>
+            </div>
+
+            <div style="background: white; padding: 30px; border-radius: 8px; color: var(--text-color);">
+
+                <!-- ⭐ ADD AN ID TO THIS FORM (IMPORTANT FOR JS) -->
+                <form id="leadForm" action="https://formspree.io/f/mwpyrrke" method="POST">
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" name="name" placeholder="Your Name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Phone Number</label>
+                        <input type="tel" id="phone" name="phone" placeholder="07123 456 789" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="postcode">Property Postcode</label>
+                        <input type="text" id="postcode" name="postcode" placeholder="e.g. G1 1AB">
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Any details? (Optional)</label>
+                        <textarea id="message" name="message" rows="4" placeholder="Tell us about the property..."></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-full-width">Request Call Back</button>
+                </form>
 
             </div>
+
         </div>
-    </section>
+    </div>
+</section>
+
+<!-- ⭐ ADD THIS SCRIPT RIGHT BELOW THE FORM (THIS SENDS THE DATA TO N8N) -->
+<script>
+document.getElementById("leadForm").addEventListener("submit", function(e) {
+    
+    // ⭐ GATHER FORM VALUES
+    const payload = {
+        name: document.getElementById("name").value,
+        phone: document.getElementById("phone").value,
+        postcode: document.getElementById("postcode").value,
+        message: document.getElementById("message").value
+    };
+
+    // ⭐ SEND DATA TO YOUR N8N WEBHOOK (ADD YOUR OWN URL BELOW)
+    fetch("https://YOUR-N8N-DOMAIN/webhook/sb-property-lead", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(payload)
+    });
+
+    // ⭐ FORM STILL SUBMITS TO FORMSPREE NORMALLY
+});
+</script>
 
     <footer>
         <div class="container">
