@@ -1,0 +1,65 @@
+﻿node : C:\Users\Sean\
+Documents\Webisites\S
+B_PROPERTIES_UK-Githu
+b\global_restructure.
+js:173
+At line:1 char:1
++ node global_restruc
+ture.js 2>&1 | 
+Out-File -Encoding 
+utf8 error.log
++ ~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~
+    + CategoryInfo   
+           : NotSpe  
+  cified: (C:\User   
+ s\Sean\D...truct    
+ure.js:173:Strin    
+g) [], RemoteExc    
+eption
+    + FullyQualified 
+   ErrorId : Native  
+  CommandError
+ 
+let sitemapXml = 
+\`<?xml 
+version="1.0" 
+encoding="UTF-8"?>
+                 ^
+
+SyntaxError: Invalid 
+or unexpected token
+    at wrapSafe (node
+:internal/modules/cjs
+/loader:1691:18)
+    at 
+Module._compile (node
+:internal/modules/cjs
+/loader:1734:20)
+    at Object..js (no
+de:internal/modules/c
+js/loader:1892:10)
+    at Module.load (n
+ode:internal/modules/
+cjs/loader:1480:32)
+    at Module._load (
+node:internal/modules
+/cjs/loader:1299:12)
+    at TracingChannel
+.traceSync (node:diag
+nostics_channel:328:1
+4)
+    at 
+wrapModuleLoad (node:
+internal/modules/cjs/
+loader:245:24)
+    at Module.execute
+UserEntryPoint [as 
+runMain] (node:intern
+al/modules/run_main:1
+54:5)
+    at node:internal/
+main/run_main_module:
+33:47
+
+Node.js v25.2.1

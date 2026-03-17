@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+    <meta charset="UTF-8">
+    <title>Page Not Found | SB Properties</title>
+    <script>
+        const p = window.location.pathname;
+        if (p.endsWith('.html') && !p.includes('index.html') && !p.includes('404.html') && !p.includes('terms.html')) {
+            window.location.replace(p.replace('.html', '/'));
+        }
+    </script>
+    <style>
+        body { font-family: sans-serif; text-align: center; padding: 100px 20px; background: #f5f5f5; }
+        h1 { font-size: 3rem; margin-bottom: 20px; }
+        a { color: #7AC943; text-decoration: none; font-weight: bold; }
+    </style>
+
+    <!-- Dynamic Date Metadata Engine -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            try {
+                const now = new Date();
+                const monthNames = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+                const curMonth = monthNames[now.getMonth()];
+                const curYear = now.getFullYear();
+                const dateStr = curMonth + " " + curYear;
+                const isoDate = now.toISOString().split('T')[0];
+
+                if (document.title.includes('2026')) {
+                    document.title = document.title.replace('2026', dateStr);
+                }
+                
+                const metaDesc = document.querySelector('meta[name="description"]');
+                if (metaDesc && metaDesc.getAttribute('content').includes('2026')) {
+                    metaDesc.setAttribute('content', metaDesc.getAttribute('content').replace('2026', dateStr));
+                }
+                
+                const ogTitle = document.querySelector('meta[property="og:title"]');
+                if (ogTitle && ogTitle.getAttribute('content').includes('2026')) {
+                    ogTitle.setAttribute('content', ogTitle.getAttribute('content').replace('2026', dateStr));
+                }
+                
+                const ogDesc = document.querySelector('meta[property="og:description"]');
+                if (ogDesc && ogDesc.getAttribute('content').includes('2026')) {
+                    ogDesc.setAttribute('content', ogDesc.getAttribute('content').replace('2026', dateStr));
+                }
+
+                const schemaScripts = document.querySelectorAll('script[type="application/ld+json"]');
+                schemaScripts.forEach(script => {
+                    let json = JSON.parse(script.innerHTML);
+                    let modified = false;
+                    if (json.dateModified) { json.dateModified = isoDate; modified = true; }
+                    
+                    const updateStr = (s) => {
+                        if (typeof s === 'string' && s.includes('2026')) {
+                            modified = true;
+                            return s.replace(/2026/g, dateStr);
+                        }
+                        return s;
+                    };
+
+                    if (json.headline) json.headline = updateStr(json.headline);
+                    if (json.description) json.description = updateStr(json.description);
+                    if (json.name) json.name = updateStr(json.name);
+                    
+                    if (modified) script.innerHTML = JSON.stringify(json, null, 2);
+                });
+            } catch (e) {
+                console.error('Date engine error:', e);
+            }
+        });
+    </script>
+
+</head>
+<body>
+    <h1>404 - Property Not Found</h1>
+    <p>The page you are looking for has been moved or does not exist.</p>
+    <br>
+    <a href="index.html">Return to Homepage</a>
+</body>
+</html>

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Terms & Conditions | SB Properties UK</title>
+    <meta name="description" content="Terms and conditions for using the SB Properties UK website and our fast cash house buying services in Scotland.">
+    <link rel="canonical" href="https://sbproperties.uk/terms.html">
+    <style>
+        body { font-family: system-ui, sans-serif; line-height: 1.6; color: #333; padding: 40px 20px; max-width: 800px; margin: 0 auto; }
+        h1, h2 { color: #000; }
+        a { color: #7AC943; text-decoration: none; }
+        a:hover { text-decoration: underline; }
+    </style>
+
+    <!-- Dynamic Date Metadata Engine -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            try {
+                const now = new Date();
+                const monthNames = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+                const curMonth = monthNames[now.getMonth()];
+                const curYear = now.getFullYear();
+                const dateStr = curMonth + " " + curYear;
+                const isoDate = now.toISOString().split('T')[0];
+
+                if (document.title.includes('2026')) {
+                    document.title = document.title.replace('2026', dateStr);
+                }
+                
+                const metaDesc = document.querySelector('meta[name="description"]');
+                if (metaDesc && metaDesc.getAttribute('content').includes('2026')) {
+                    metaDesc.setAttribute('content', metaDesc.getAttribute('content').replace('2026', dateStr));
+                }
+                
+                const ogTitle = document.querySelector('meta[property="og:title"]');
+                if (ogTitle && ogTitle.getAttribute('content').includes('2026')) {
+                    ogTitle.setAttribute('content', ogTitle.getAttribute('content').replace('2026', dateStr));
+                }
+                
+                const ogDesc = document.querySelector('meta[property="og:description"]');
+                if (ogDesc && ogDesc.getAttribute('content').includes('2026')) {
+                    ogDesc.setAttribute('content', ogDesc.getAttribute('content').replace('2026', dateStr));
+                }
+
+                const schemaScripts = document.querySelectorAll('script[type="application/ld+json"]');
+                schemaScripts.forEach(script => {
+                    let json = JSON.parse(script.innerHTML);
+                    let modified = false;
+                    if (json.dateModified) { json.dateModified = isoDate; modified = true; }
+                    
+                    const updateStr = (s) => {
+                        if (typeof s === 'string' && s.includes('2026')) {
+                            modified = true;
+                            return s.replace(/2026/g, dateStr);
+                        }
+                        return s;
+                    };
+
+                    if (json.headline) json.headline = updateStr(json.headline);
+                    if (json.description) json.description = updateStr(json.description);
+                    if (json.name) json.name = updateStr(json.name);
+                    
+                    if (modified) script.innerHTML = JSON.stringify(json, null, 2);
+                });
+            } catch (e) {
+                console.error('Date engine error:', e);
+            }
+        });
+    </script>
+
+</head>
+<body>
+    <h1>Terms and Conditions</h1>
+    <p>Last updated: 2026</p>
+    
+    <h2>1. Introduction</h2>
+    <p>Welcome to SB Properties UK. By accessing our website and using our services, you agree to comply with and be bound by the following terms and conditions.</p>
+    
+    <h2>2. Services</h2>
+    <p>SB Properties UK is a property buying company. We provide cash offers for residential properties across Scotland. Any offer made is subject to survey, contract, and clear title.</p>
+    
+    <h2>3. Property Valuations & Offers</h2>
+    <p>Any initial offer made by phone or email is an estimate based on the information provided by you and our desktop research. Our formal offer will be confirmed after an independent appraisal or RICS survey.</p>
+    
+    <h2>4. No Fees</h2>
+    <p>We do not charge you any fees for our service. If we proceed with the purchase of your property, we may cover your reasonable legal fees provided you use a solicitor from our recommended panel.</p>
+    
+    <h2>5. Data Protection</h2>
+    <p>We handle your personal information in accordance with our <a href="index.html#">Privacy Policy</a> and the Data Protection Act.</p>
+    
+    <h2>6. Liability</h2>
+    <p>To the maximum extent permitted by law, SB Properties UK accepts no liability for any direct or indirect loss or damage, foreseeable or otherwise, including any indirect, consequential, special or exemplary damages arising from the use of the website or any information contained in it.</p>
+    
+    <h2>7. Governing Law</h2>
+    <p>These terms and conditions are governed by and construed in accordance with the laws of Scotland.</p>
+    
+    <p style="margin-top: 40px;"><a href="/index/">← Back to Homepage</a></p>
+</body>
+</html>
