@@ -265,7 +265,19 @@
             #contact .container { padding: 0 !important; }
             .form-wrapper-standard { padding: 15px !important; border-radius: 0; border-left: none; border-right: none; }
         }
-    </style>
+    
+        /* Mobile Header Icons CSS */
+        .mobile-icons { display: none; }
+        .desktop-phone { display: none; }
+        @media (min-width: 721px) {
+            .desktop-phone { display: block !important; }
+            /* some pages use inline block, block is safer if flex container but header-actions is flex so block is fine */
+        }
+        @media (max-width: 720px) {
+            .mobile-icons { display: flex !important; gap: 16px; align-items: center; }
+            .mobile-icons a { color: var(--black); display: flex; align-items: center; justify-content: center; }
+        }
+</style>
 
 </head>
 <body>
@@ -277,8 +289,22 @@
             <span>SB Properties</span>
         </a>
         <div class="header-actions">
-            <nav class="main-nav"><a href="../../" class="nav-link">Home</a><a href="../../blog/" class="nav-link">Blog</a></nav>
-            <a href="tel:07346739722" style="font-weight:900; color:black; text-decoration:none;">07346739722</a>
+            <nav class="main-nav">
+                <a href="../../" class="nav-link">Home</a>
+                <a href="../../blog/" class="nav-link">Blog</a>
+            </nav>
+            
+            <!-- Mobile Icons -->
+            <div class="mobile-icons">
+                <a href="../../blog/" aria-label="Blog">
+                    <svg viewBox="0 0 24 24" width="22" height="22" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path></svg>
+                </a>
+                <a href="tel:07346739722" aria-label="Call Us">
+                    <svg viewBox="0 0 24 24" width="22" height="22" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+                </a>
+            </div>
+
+            <a href="tel:07346739722" class="desktop-phone" style="font-weight:900; color:black; text-decoration:none;">07346739722</a>
             <a href="#contact" class="btn btn-primary">Get Offer</a>
         </div>
     </div>
