@@ -57,10 +57,10 @@
         .container { max-width: var(--container-width); margin: 0 auto; padding: 0 20px; }
         .bg-black { background-color: var(--black); color: var(--white); }
         
-        header { background: #fff; box-shadow: 0 2px 10px rgba(0,0,0,0.05); padding: 15px 0; position: sticky; top: 0; z-index: 100; }
-        .nav-flex { display: flex; justify-content: space-between; align-items: center; }
-        .logo { font-weight: 900; color: #000; display: flex; align-items: center; gap: 10px; text-decoration: none; font-size: 1.2rem; }
-        .logo img { height: 40px; }
+        header { background: var(--white); box-shadow: 0 2px 10px rgba(0,0,0,0.06); padding: 14px 0; position: sticky; top: 0; z-index: 1000; }
+        .nav-flex { display: flex; justify-content: space-between; align-items: center; gap: 14px; }
+        .logo { font-size: 1.1rem; font-weight: 950; color: var(--black); display: flex; align-items: center; gap: 10px; white-space: nowrap; text-decoration: none; }
+        .logo img { height: 44px; width: auto; display: block; }
 
         .blog-hero { background: var(--black); color: #fff; padding: 80px 0; text-align: center; }
         .blog-hero h1 { font-size: 3rem; font-weight: 950; margin-bottom: 20px; }
@@ -84,7 +84,7 @@
         .blog-card:hover .read-more::after { transform: translateX(5px); }
 
         .home-btn-container { padding: 15px 0; border-bottom: 1px solid #eee; background: var(--light-grey); }
-        .btn { display: inline-block; padding: 10px 24px; border-radius: 8px; font-weight: 800; text-decoration: none !important; transition: 0.2s; background: var(--primary); color: var(--white) !important; border: none; }
+        .btn { display: inline-block; padding: 14px 32px; border-radius: var(--border-radius); font-weight: 800; text-align: center; font-size: 1rem; line-height: 1; text-decoration: none !important; transition: 0.25s ease; background: var(--primary); color: var(--white) !important; border: none; }
         .btn:hover { background: var(--primary-dark); transform: translateY(-2px); }
         .btn-primary { background: var(--primary); color: var(--white) !important; }
         .btn-outline { background: transparent; border: 2px solid var(--primary); color: var(--primary); padding: 8px 16px; font-weight: bold; text-decoration: none; border-radius: 8px; font-size: 0.9rem; }
@@ -95,7 +95,7 @@
         .header-actions {
             display: flex;
             align-items: center;
-            gap: 20px;
+            gap: 14px;
         }
         .main-nav {
             display: flex;
