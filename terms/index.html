@@ -11,6 +11,24 @@
         h1, h2 { color: #000; }
         a { color: #7AC943; text-decoration: none; }
         a:hover { text-decoration: underline; }
+
+        .main-nav {
+            display: flex;
+            gap: 20px;
+        }
+        .nav-link {
+            font-weight: 700;
+            color: var(--black);
+            font-size: 0.95rem;
+        }
+        .nav-link:hover {
+            color: var(--primary);
+        }
+        @media (max-width: 720px) {
+            .main-nav {
+                display: none;
+            }
+        }
     </style>
 
     <!-- Dynamic Date Metadata Engine -->

@@ -693,6 +693,24 @@
         #toggle-areas {
             min-width: 200px;
         }
+
+        .main-nav {
+            display: flex;
+            gap: 20px;
+        }
+        .nav-link {
+            font-weight: 700;
+            color: var(--black);
+            font-size: 0.95rem;
+        }
+        .nav-link:hover {
+            color: var(--primary);
+        }
+        @media (max-width: 720px) {
+            .main-nav {
+                display: none;
+            }
+        }
     </style>
 
     <!-- Dynamic Date Metadata Engine -->
@@ -761,8 +779,8 @@
             <img src="logo.webp" alt="SB Properties UK Logo" width="180" height="44" loading="eager" decoding="async">
             <span>SB Properties</span>
         </a>
-        <a href="blog/" style="margin-right:20px; color:black; font-weight:bold; text-decoration:none;">Blog</a>
         <div class="header-actions">
+            <nav class="main-nav"><a href="blog/" class="nav-link">Blog</a></nav>
             <a href="tel:07346739722" class="phone-link">07346739722</a>
             <a href="#contact" class="btn btn-primary">Get Offer</a>
         </div>
@@ -993,7 +1011,6 @@
                 Choose your area to view a dedicated page. If your area isn’t listed, contact us and we’ll advise.
             </p>
 
-            
             <div id="areas-grid" class="area-grid collapsed" aria-label="Area pages">
                 <!-- Original 8 -->
                 <a class="area-btn" href="sell-my-house-fast-springburn/">Springburn</a>

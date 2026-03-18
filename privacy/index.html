@@ -98,6 +98,24 @@
             color: #999;
             font-size: 0.9rem;
         }
+
+        .main-nav {
+            display: flex;
+            gap: 20px;
+        }
+        .nav-link {
+            font-weight: 700;
+            color: var(--black);
+            font-size: 0.95rem;
+        }
+        .nav-link:hover {
+            color: var(--primary);
+        }
+        @media (max-width: 720px) {
+            .main-nav {
+                display: none;
+            }
+        }
     </style>
 
     <!-- Dynamic Date Metadata Engine -->
@@ -161,14 +179,17 @@
 
     <!-- Header with Back Button -->
     <header>
-        <div class="container nav-flex">
-            <a href="/" class="logo">
+    <div class="container nav-flex">
+        <a href="/" class="logo">
                 <img src="/logo.webp" alt="SB Logo">
                 <span>SB Properties</span>
             </a>
-            <a href="/" class="btn-small">Back to Home</a>
+        <div class="header-actions">
+            <nav class="main-nav"><a href="../" class="nav-link">Home</a><a href="../blog/" class="nav-link">Blog</a></nav>
+
         </div>
-    </header>
+    </div>
+</header>
 
     <!-- Main Content -->
     <main class="container">
