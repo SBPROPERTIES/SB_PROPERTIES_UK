@@ -681,6 +681,18 @@
             * { scroll-behavior: auto !important; }
             .btn, .step-card, .area-btn { transition: none !important; }
         }
+
+        /* Expandable Area Grid */
+        .area-grid.collapsed > a:nth-child(n+9) {
+            display: none;
+        }
+        .toggle-container {
+            text-align: center;
+            margin-top: 30px;
+        }
+        #toggle-areas {
+            min-width: 200px;
+        }
     </style>
 
     <!-- Dynamic Date Metadata Engine -->
@@ -982,7 +994,7 @@
             </p>
 
             
-            <div class="area-grid" aria-label="Area pages">
+            <div id="areas-grid" class="area-grid collapsed" aria-label="Area pages">
                 <!-- Original 8 -->
                 <a class="area-btn" href="sell-my-house-fast-springburn/">Springburn</a>
                 <a class="area-btn" href="sell-my-house-fast-possilpark/">Possilpark</a>
@@ -1016,8 +1028,27 @@
                 <a class="area-btn" href="sell-my-house-fast-stirling/">Stirling</a>
                 <a class="area-btn" href="sell-my-house-fast-ayrshire/">Ayrshire</a>
             </div>
+            <div class="toggle-container">
+                <button id="toggle-areas" class="btn btn-outline">View All Areas</button>
+            </div>
         </div>
     </section>
+
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const grid = document.getElementById('areas-grid');
+        const btn = document.getElementById('toggle-areas');
+        if (grid && btn) {
+            btn.addEventListener('click', function() {
+                const isCollapsed = grid.classList.toggle('collapsed');
+                btn.textContent = isCollapsed ? 'View All Areas' : 'Show Less';
+                if (isCollapsed) {
+                    grid.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+                }
+            });
+        }
+    });
+    </script>
 
     <section style="padding: var(--section-padding);">
         <div class="container">
