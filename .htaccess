@@ -1,0 +1,9 @@
+RewriteEngine On
+
+# 1. Redirect any request ending in /index.html to the directory without index.html (including root)
+RewriteCond %{THE_REQUEST} ^[A-Z]{3,9}\ /(.*/)?index\.html\ HTTP/ [NC]
+RewriteRule ^(.*/)?index\.html$ /$1 [R=301,L]
+
+# 2. Redirect general .html requests (excluding index.html) to the trailing slash version
+RewriteCond %{THE_REQUEST} ^[A-Z]{3,9}\ /((?!.*/index\.html)[^.]+)\.html\ HTTP/ [NC]
+RewriteRule ^((?!.*/index\.html)[^.]+)\.html$ /$1/ [R=301,L]
