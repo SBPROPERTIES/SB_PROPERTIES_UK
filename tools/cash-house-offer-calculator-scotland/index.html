@@ -1,0 +1,825 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Cash House Offer Calculator Scotland | Compare Net Proceeds</title>
+    <meta name="description" content="Estimate how a Scottish direct-property offer may be assessed, compare possible net proceeds and see every assumption before requesting a tailored cash offer.">
+
+    <link rel="canonical" href="https://sbproperties.uk/tools/cash-house-offer-calculator-scotland/">
+
+    <link rel="icon" href="../../favicon.ico" sizes="any">
+    <link rel="icon" type="image/webp" href="/logo.webp">
+
+    <meta property="og:title" content="Cash House Offer Calculator Scotland | Compare Net Proceeds">
+    <meta property="og:description" content="Estimate how a Scottish direct-property offer may be assessed, compare possible net proceeds and see every assumption before requesting a tailored cash offer.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://sbproperties.uk/tools/cash-house-offer-calculator-scotland/">
+    <meta property="og:image" content="https://sbproperties.uk/logo.webp">
+    <meta name="twitter:card" content="summary_large_image">
+
+    <!-- BreadcrumbList Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://sbproperties.uk/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Tools",
+          "item": "https://sbproperties.uk/tools/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Cash House Offer Calculator Scotland",
+          "item": "https://sbproperties.uk/tools/cash-house-offer-calculator-scotland/"
+        }
+      ]
+    }
+    </script>
+
+    <!-- WebApplication Schema for Calculator -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebApplication",
+      "name": "Scottish Cash House Offer Calculator",
+      "description": "An interactive educational tool to estimate and compare potential net proceeds from an open-market sale, property auction, or direct cash buyer in Scotland.",
+      "applicationCategory": "BusinessApplication, CalculatorApplication",
+      "operatingSystem": "All",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "GBP"
+      }
+    }
+    </script>
+
+    <!-- FAQPage Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Does this calculator guarantee the price you will pay for my house?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. The calculator is an educational tool. It uses indicative percentages to demonstrate how a direct offer compares to the costs of selling on the open market. Any formal offer from SB Properties UK is based on an individual assessment of your specific property."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Why do cash buyers offer below market value?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "A direct cash buyer provides speed, certainty, and pays in cash without requiring mortgage approval. In exchange for absorbing the holding costs, market risks, and conveyancing time, the offer is typically below the theoretical maximum open-market value."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do I still need a Home Report for a direct sale?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Usually, no. In Scotland, a Home Report is legally required when marketing a property to the public. If you sell directly and privately before marketing, this requirement is not triggered, saving you the upfront cost."
+          }
+        }
+      ]
+    }
+    </script>
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-HMFSX14PT5"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-HMFSX14PT5');
+    </script>
+
+    <style>
+        :root {
+            --primary: #7AC943;
+            --primary-dark: #65a636;
+            --black: #000000;
+            --dark-grey: #1a1a1a;
+            --light-grey: #F5F5F5;
+            --white: #FFFFFF;
+            --text-color: #333333;
+            --border-color: #e0e0e0;
+
+            --container-width: 1100px;
+            --section-padding: 80px 20px;
+            --border-radius: 10px;
+        }
+
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+
+        body {
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            color: var(--text-color);
+            line-height: 1.6;
+            background-color: var(--white);
+            scroll-behavior: smooth;
+        }
+
+        h1, h2, h3, h4 {
+            font-weight: 900;
+            line-height: 1.15;
+            margin-bottom: 1rem;
+            color: var(--black);
+        }
+
+        p { margin-bottom: 1.25rem; }
+        a { text-decoration: none; transition: 0.25s ease; color: inherit; }
+
+        .container { max-width: var(--container-width); margin: 0 auto; padding: 0 20px; }
+        .bg-light { background-color: var(--light-grey); }
+        .bg-black { background-color: var(--black); color: var(--white); }
+        .muted { color: #666; }
+        .small { font-size: 0.95rem; }
+
+        .btn {
+            display: inline-block; padding: 14px 32px; border-radius: var(--border-radius);
+            font-weight: 800; text-align: center; cursor: pointer; font-size: 1rem;
+            border: none; line-height: 1; transition: 0.2s;
+        }
+        .btn-primary { background-color: var(--primary); color: var(--white); }
+        .btn-primary:hover { background-color: var(--primary-dark); transform: translateY(-2px); }
+        .btn-outline { background-color: transparent; border: 2px solid var(--primary); color: var(--primary); }
+        .btn-outline:hover { background-color: var(--primary); color: var(--white); }
+        .btn-secondary { background-color: #e0e0e0; color: var(--black); }
+        .btn-secondary:hover { background-color: #d0d0d0; }
+        .btn-full-width { width: 100%; }
+
+        header { background: var(--white); box-shadow: 0 2px 10px rgba(0,0,0,0.06); position: sticky; top: 0; z-index: 1000; padding: 14px 0; }
+        .nav-flex { display: flex; justify-content: space-between; align-items: center; gap: 14px; }
+        .logo { font-size: 1.1rem; font-weight: 950; color: var(--black); display: flex; align-items: center; gap: 10px; white-space: nowrap; }
+        .logo img { height: 44px; width: auto; display: block; }
+        .header-actions { display: flex; align-items: center; gap: 14px; }
+        .main-nav { display: flex; gap: 20px; }
+        .nav-link { font-weight: 700; color: var(--black); font-size: 0.95rem; }
+        .nav-link:hover { color: var(--primary); }
+        .desktop-phone { display: none; }
+        .mobile-icons { display: none; }
+
+        @media (min-width: 721px) { .desktop-phone { display: block; } }
+        @media (max-width: 720px) {
+            .main-nav { display: none; }
+            .mobile-icons { display: flex; gap: 16px; align-items: center; }
+            .mobile-icons a { color: var(--black); display: flex; align-items: center; justify-content: center; }
+        }
+
+        .hero { background: var(--black); color: var(--white); padding: 80px 20px 60px; text-align: center; }
+        .hero h1 { color: var(--white); font-size: 2.2rem; max-width: 900px; margin: 0 auto 16px; }
+        .hero p { font-size: 1.1rem; color: #ccc; max-width: 700px; margin: 0 auto; }
+        @media (min-width: 900px) { .hero h1 { font-size: 3rem; } }
+
+        .section-title { font-size: 2rem; text-align: center; margin-bottom: 10px; }
+        .section-subtitle { text-align: center; color: #666; margin-bottom: 40px; max-width: 820px; margin-left: auto; margin-right: auto; }
+        
+        .body-link { color: var(--primary-dark); text-decoration: underline; }
+        .body-link:hover { color: var(--primary); }
+
+        /* Calculator Styles */
+        .calc-wrapper {
+            background: #fff;
+            border-radius: var(--border-radius);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+            border: 1px solid var(--border-color);
+            margin: -40px auto 40px;
+            max-width: 1000px;
+            position: relative;
+            z-index: 10;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+        }
+
+        @media (min-width: 900px) { .calc-wrapper { flex-direction: row; } }
+
+        .calc-input-section {
+            padding: 30px;
+            background: #fafafa;
+            flex: 1;
+            border-right: 1px solid var(--border-color);
+        }
+
+        .calc-results-section {
+            padding: 30px;
+            flex: 1;
+            background: #fff;
+        }
+
+        .calc-group { margin-bottom: 20px; }
+        .calc-group label {
+            display: block;
+            font-weight: 800;
+            margin-bottom: 6px;
+            font-size: 0.95rem;
+            color: var(--black);
+        }
+        
+        .input-with-symbol {
+            position: relative;
+            display: flex;
+            align-items: center;
+        }
+        
+        .input-symbol {
+            position: absolute;
+            left: 14px;
+            color: #666;
+            font-weight: bold;
+        }
+
+        .calc-input-section input[type="text"], .calc-input-section input[type="number"] {
+            width: 100%;
+            padding: 14px 14px 14px 30px;
+            border: 2px solid var(--border-color);
+            border-radius: 8px;
+            font-size: 1.1rem;
+            font-family: inherit;
+            transition: border-color 0.2s;
+        }
+
+        .calc-input-section input:focus {
+            outline: none;
+            border-color: var(--primary);
+        }
+
+        .advanced-toggle {
+            background: none;
+            border: none;
+            color: var(--primary-dark);
+            font-weight: bold;
+            cursor: pointer;
+            padding: 10px 0;
+            font-size: 0.95rem;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            text-decoration: underline;
+        }
+
+        .advanced-settings {
+            display: none;
+            margin-top: 15px;
+            padding-top: 15px;
+            border-top: 1px solid #ddd;
+        }
+
+        .advanced-settings.open { display: block; }
+
+        .setting-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+
+        .setting-row label { font-weight: normal; font-size: 0.9rem; margin: 0; }
+        .setting-input {
+            width: 90px !important;
+            padding: 6px !important;
+            font-size: 0.9rem !important;
+        }
+
+        .result-card {
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 20px;
+            background: #fff;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .result-card.highlight {
+            border-color: var(--primary);
+            box-shadow: 0 4px 15px rgba(122,201,67,0.15);
+        }
+
+        .result-card.highlight::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; width: 6px; height: 100%;
+            background: var(--primary);
+        }
+
+        .result-title {
+            font-size: 1.1rem;
+            font-weight: 900;
+            margin-bottom: 5px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .result-amount {
+            font-size: 2rem;
+            font-weight: 900;
+            color: var(--black);
+            margin-bottom: 10px;
+        }
+        
+        .result-card.highlight .result-amount { color: var(--primary-dark); }
+
+        .breakdown-row {
+            display: flex;
+            justify-content: space-between;
+            font-size: 0.9rem;
+            color: #555;
+            margin-bottom: 6px;
+            border-bottom: 1px dashed #eee;
+            padding-bottom: 4px;
+        }
+
+        .disclaimer-box {
+            background: rgba(0,0,0,0.03);
+            border-left: 4px solid #ccc;
+            padding: 15px;
+            font-size: 0.85rem;
+            color: #666;
+            border-radius: 4px;
+        }
+
+        /* Content grids */
+        .grid-2 { display: grid; grid-template-columns: 1fr; gap: 30px; margin-top: 30px; }
+        @media (min-width: 900px) { .grid-2 { grid-template-columns: 1fr 1fr; } }
+        
+        .card { background: #fff; padding: 30px; border-radius: var(--border-radius); border: 1px solid var(--border-color); }
+        .card h3 { margin-bottom: 15px; font-size: 1.3rem; border-bottom: 2px solid rgba(122,201,67,0.3); padding-bottom: 10px; display: inline-block; }
+
+        /* Accordion */
+        details { background: var(--white); margin-bottom: 14px; border-bottom: 1px solid #eee; padding-bottom: 14px; }
+        summary { cursor: pointer; font-weight: 900; list-style: none; font-size: 1.05rem; position: relative; padding-right: 30px; }
+        summary::-webkit-details-marker { display: none; }
+        summary::after { content: '+'; position: absolute; right: 0; color: var(--primary); font-weight: 950; font-size: 1.5rem; line-height: 1rem; }
+        details[open] summary::after { content: '-'; }
+        details p { margin-top: 14px; color: #555; }
+
+        /* Footer */
+        footer { background: var(--black); color: #bfbfbf; padding: 44px 0; font-size: 0.95rem; }
+        .footer-grid { display: grid; grid-template-columns: 1fr; gap: 22px; align-items: start; }
+        @media (min-width: 900px) { .footer-grid { grid-template-columns: 1.2fr 0.8fr; } }
+        footer a { color: #e0e0e0; }
+        footer a:hover { color: var(--primary); }
+        .footer-links { display: flex; gap: 14px; flex-wrap: wrap; margin-top: 10px; }
+        .nap { border: 1px solid rgba(255,255,255,0.12); border-radius: var(--border-radius); padding: 16px; background: rgba(255,255,255,0.04); }
+        .nap strong { color: #fff; }
+        .footer-bottom { margin-top: 22px; padding-top: 18px; border-top: 1px solid rgba(255,255,255,0.12); display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px; align-items: center; }
+    </style>
+
+    <!-- Dynamic Date Script -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            try {
+                const now = new Date();
+                const monthNames = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+                const dateStr = monthNames[now.getMonth()] + " " + now.getFullYear();
+                
+                const els = document.querySelectorAll('.dynamic-date');
+                els.forEach(el => el.textContent = dateStr);
+            } catch (e) {}
+        });
+    </script>
+</head>
+
+<body>
+
+<header>
+    <div class="container nav-flex">
+        <a href="../../" class="logo" aria-label="SB Properties UK home">
+            <img src="../../logo.webp" alt="SB Properties UK Logo" width="180" height="44" loading="eager" decoding="async">
+            <span>SB Properties</span>
+        </a>
+        <div class="header-actions">
+            <nav class="main-nav">
+                <a href="../../" class="nav-link">Home</a>
+                <a href="../../blog/" class="nav-link">Blog</a>
+            </nav>
+            <div class="mobile-icons">
+                <a href="../../blog/" aria-label="Blog">
+                    <svg viewBox="0 0 24 24" width="22" height="22" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path></svg>
+                </a>
+            </div>
+            <a href="tel:07346739722" class="desktop-phone" style="font-weight:900; color:black; text-decoration:none;">07346739722</a>
+        </div>
+    </div>
+</header>
+
+<main>
+    <section class="hero">
+        <div class="container">
+            <h1>Scottish Cash House Offer Calculator</h1>
+            <p>Estimate and compare the potential net proceeds from an open-market sale, a property auction, and a direct cash buyer. This is an educational tool, not a guaranteed offer.</p>
+        </div>
+    </section>
+
+    <!-- CALCULATOR APP -->
+    <section style="padding: 0 20px;">
+        <div class="calc-wrapper" id="calculatorApp">
+            
+            <!-- INPUTS -->
+            <div class="calc-input-section">
+                <h2 style="font-size: 1.4rem; margin-bottom: 20px;">Enter your property details</h2>
+                
+                <div class="calc-group">
+                    <label for="marketValue">Expected Open-Market Value (£)</label>
+                    <div class="input-with-symbol">
+                        <span class="input-symbol">£</span>
+                        <input type="text" id="marketValue" value="150,000" aria-label="Expected Open-Market Value">
+                    </div>
+                    <p class="form-note">What a surveyor or Home Report might value the property at.</p>
+                </div>
+
+                <div class="calc-group">
+                    <label for="mortgageBalance">Outstanding Mortgage (£)</label>
+                    <div class="input-with-symbol">
+                        <span class="input-symbol">£</span>
+                        <input type="text" id="mortgageBalance" value="50,000" aria-label="Outstanding Mortgage Balance">
+                    </div>
+                </div>
+                
+                <button type="button" class="advanced-toggle" id="toggleAssumptions" aria-expanded="false">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"></circle><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path></svg>
+                    Adjust Calculation Assumptions
+                </button>
+
+                <div class="advanced-settings" id="assumptionsPanel">
+                    <p class="form-note" style="margin-bottom: 15px;">These are industry averages. Adjust them to match your quotes.</p>
+                    
+                    <div class="setting-row">
+                        <label for="agentFee">Estate Agent Fee (%)</label>
+                        <input type="number" id="agentFee" class="setting-input" value="1.25" step="0.1" aria-label="Estate Agent Fee Percentage">
+                    </div>
+                    <div class="setting-row">
+                        <label for="marketingFee">Marketing/Photo Fee (£)</label>
+                        <input type="number" id="marketingFee" class="setting-input" value="350" aria-label="Marketing Fee">
+                    </div>
+                    <div class="setting-row">
+                        <label for="homeReport">Home Report Cost (£)</label>
+                        <input type="number" id="homeReport" class="setting-input" value="500" aria-label="Home Report Cost">
+                    </div>
+                    <div class="setting-row">
+                        <label for="legalFee">Conveyancing Legal Fee (£)</label>
+                        <input type="number" id="legalFee" class="setting-input" value="1200" aria-label="Conveyancing Legal Fee">
+                    </div>
+                    <div class="setting-row">
+                        <label for="holdingCost">Monthly Holding Costs (£)<br><small class="muted">(Mortgage, Tax, Utilities)</small></label>
+                        <input type="number" id="holdingCost" class="setting-input" value="600" aria-label="Monthly Holding Costs">
+                    </div>
+                    <div class="setting-row">
+                        <label for="monthsToSell">Months to Complete on Market</label>
+                        <input type="number" id="monthsToSell" class="setting-input" value="4" aria-label="Months to Complete on Market">
+                    </div>
+                    <div class="setting-row">
+                        <label for="directDiscount">Direct Sale Example Discount (%)</label>
+                        <input type="number" id="directDiscount" class="setting-input" value="15" aria-label="Direct Sale Example Discount">
+                    </div>
+                    <button type="button" class="btn btn-secondary btn-full-width" id="btnReset" style="margin-top:15px; padding: 10px;">Reset to Defaults</button>
+                </div>
+            </div>
+
+            <!-- RESULTS -->
+            <div class="calc-results-section" aria-live="polite">
+                <h2 style="font-size: 1.4rem; margin-bottom: 20px;">Your Indicative Results</h2>
+
+                <!-- Direct Sale Result -->
+                <div class="result-card highlight">
+                    <div class="result-title">
+                        <span>Direct Cash Sale</span>
+                        <span style="font-size: 0.85rem; font-weight: normal; background: var(--primary); color: white; padding: 2px 8px; border-radius: 999px;">Fastest</span>
+                    </div>
+                    <div class="result-amount" id="resDirectNet">£0</div>
+                    
+                    <div class="breakdown-row"><span>Indicative Gross Offer:</span> <span id="resDirectGross">£0</span></div>
+                    <div class="breakdown-row"><span>Home Report / Agent Fees:</span> <span>£0</span></div>
+                    <div class="breakdown-row"><span>Holding Costs (1 Month):</span> <span id="resDirectHolding">£0</span></div>
+                    <div class="breakdown-row" style="margin-bottom: 15px; border-bottom: none;"><span>Legal Fees:</span> <span id="resDirectLegal">£0</span></div>
+                    
+                    <div class="breakdown-row" style="font-weight: bold; color: var(--black);"><span>Cash Remaining (after mortgage):</span> <span id="resDirectCash">£0</span></div>
+                </div>
+
+                <!-- Open Market Result -->
+                <div class="result-card">
+                    <div class="result-title">Traditional Open Market</div>
+                    <div class="result-amount" id="resMarketNet">£0</div>
+                    
+                    <div class="breakdown-row"><span>Expected Gross Sale:</span> <span id="resMarketGross">£0</span></div>
+                    <div class="breakdown-row"><span>Agent Fee + VAT:</span> <span id="resMarketAgent">£0</span></div>
+                    <div class="breakdown-row"><span>Marketing & Home Report:</span> <span id="resMarketSetup">£0</span></div>
+                    <div class="breakdown-row"><span>Holding Costs (<span id="txtMonths">4</span> Months):</span> <span id="resMarketHolding">£0</span></div>
+                    <div class="breakdown-row" style="margin-bottom: 15px; border-bottom: none;"><span>Legal Fees:</span> <span id="resMarketLegal">£0</span></div>
+                    
+                    <div class="breakdown-row" style="font-weight: bold; color: var(--black);"><span>Cash Remaining (after mortgage):</span> <span id="resMarketCash">£0</span></div>
+                </div>
+
+                <div class="disclaimer-box">
+                    <strong>Disclaimer:</strong> This is a mathematical model for educational purposes only. It is not a formal valuation, an offer to purchase, or financial advice. The direct offer example is illustrative. SB Properties UK assesses every property individually.
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTENT SECTIONS -->
+    <section class="bg-light" style="padding: var(--section-padding);">
+        <div class="container">
+            <h2 class="section-title">What This Calculator Can and Cannot Tell You</h2>
+            <p class="section-subtitle">Transparency is critical when making significant property decisions.</p>
+            
+            <div class="grid-2">
+                <div class="card">
+                    <h3>What it does</h3>
+                    <ul style="padding-left: 20px;">
+                        <li><strong>Highlights hidden costs:</strong> Demonstrates how agent fees, VAT, Home Reports, and conveyancing reduce your gross sale price.</li>
+                        <li><strong>Reveals holding costs:</strong> Calculates the financial impact of council tax, utilities, and mortgage payments during the average 4–6 month open-market sale period.</li>
+                        <li><strong>Compares net proceeds:</strong> Shows the difference between the "headline" price an agent promises and the actual cash you might walk away with.</li>
+                    </ul>
+                </div>
+                <div class="card">
+                    <h3>What it DOES NOT do</h3>
+                    <ul style="padding-left: 20px;">
+                        <li><strong>Provide a valuation:</strong> This tool cannot inspect your property's condition or check the Land Register for local comparables.</li>
+                        <li><strong>Guarantee an offer:</strong> SB Properties UK does not use automated algorithms to buy houses. We assess real factors like cladding, factoring debts, and condition.</li>
+                        <li><strong>Predict the market:</strong> A house is only worth what a buyer is willing to pay. Open market prices can fluctuate heavily based on mortgage rates and demand.</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div style="text-align: center; margin-top: 60px;">
+                <h3 style="margin-bottom: 20px;">Visual Breakdown: Net Proceeds vs Deductions</h3>
+                <img src="scotland-cash-offer-calculator-breakdown.png" alt="Infographic comparing Open Market, Auction, and Direct Sale net proceeds vs deductions" style="max-width: 100%; height: auto; border-radius: var(--border-radius); border: 1px solid var(--border-color); box-shadow: 0 4px 12px rgba(0,0,0,0.05);" loading="lazy">
+            </div>
+        </div>
+    </section>
+
+    <section style="padding: var(--section-padding);">
+        <div class="container">
+            <h2 class="section-title">How a Direct Property Offer May Be Assessed</h2>
+            <p class="section-subtitle">If you request a genuine, property-specific assessment from us, here is exactly what we look at before presenting a figure.</p>
+            
+            <div class="grid-2">
+                <div>
+                    <h4>1. Comparable Sold-Property Evidence</h4>
+                    <p>We look at the Land Register of Scotland to see what similar properties in your street actually sold for—not just what agents listed them for. Asking prices and "Offers Over" figures are marketing tools; completed sales provide the reality.</p>
+                    
+                    <h4>2. Property Condition and Repair Requirements</h4>
+                    <p>If your property requires modernization, clearance, or has structural issues (e.g., roof repairs on a traditional tenement), we must calculate the cost of bringing it up to standard. Mainstream buyers often walk away from Category 2 or 3 repairs on a Home Report.</p>
+                    
+                    <h4>3. Mortgageability and Buyer Demand</h4>
+                    <p>Issues like non-standard construction, absent EWS1 forms (cladding documentation), or short leases drastically reduce the open-market buyer pool. A cash buyer takes on these risks.</p>
+                </div>
+                <div>
+                    <h4>4. Legal, Title, and Occupancy Risks</h4>
+                    <p>Are there <a href="../../sell-house-fast-tenanted-property-scotland/" class="body-link">tenants in situ</a>? Are there outstanding factoring debts or Notices of Potential Liability? We evaluate the legal work required to unpick complex title situations.</p>
+                    
+                    <h4>5. Finance, Holding, and Resale Costs</h4>
+                    <p>A professional cash buyer must factor in their own costs: LBTT (Land and Buildings Transaction Tax), legal fees to buy and eventually resell, empty property council tax, and insurance while holding the asset.</p>
+
+                    <div class="disclaimer-box" style="margin-top: 20px;">
+                        <strong>The Trade-Off:</strong> A direct offer will normally be lower than the theoretical top open-market value. The discount covers the buyer's risks and costs, providing you with speed, certainty, and a sale with zero estate agent fees.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="bg-light" style="padding: var(--section-padding);">
+        <div class="container">
+            <h2 class="section-title">Worked Scottish Property Examples</h2>
+            <p class="section-subtitle">Illustrative scenarios demonstrating how different sales routes perform.</p>
+            
+            <details>
+                <summary>Example 1: A Glasgow flat in reasonable condition</summary>
+                <p><strong>Scenario:</strong> Market Value £150,000. No major repairs needed.</p>
+                <p><strong>Open Market:</strong> The property achieves its full £150,000 value. However, the seller pays £500 for a Home Report, £350 for marketing, £2,250 in agent fees (inc VAT), and £1,200 in legal fees. It takes 4 months to sell, during which the seller pays £2,000 in mortgage and bills. <strong>Net Proceeds: £143,700 over 4-5 months.</strong></p>
+                <p><strong>Direct Sale:</strong> The seller accepts a direct offer of 85% (£127,500). They pay no agent fees or Home Report costs. Legal fees are £1,200. The sale completes in 1 month, costing only £500 in holding costs. <strong>Net Proceeds: £125,800 over 4 weeks with zero fall-through risk.</strong></p>
+            </details>
+
+            <details>
+                <summary>Example 2: An inherited property requiring clearance and repairs</summary>
+                <p><strong>Scenario:</strong> Market Value £120,000 (if renovated). Currently requires £15,000 in modernization to be mortgageable.</p>
+                <p><strong>Open Market:</strong> The property struggles to sell because first-time buyers cannot secure mortgages on it. The seller must fund £15,000 upfront for repairs, plus £1,000 for clearance, before marketing. </p>
+                <p><strong>Direct Sale:</strong> A cash buyer purchases the property "as-is" for £90,000. The seller avoids the £15k upfront outlay, the stress of managing contractors, and months of empty-property council tax. <a href="../../blog/sell-house-poor-condition-scotland/" class="body-link">Learn more about selling a property in poor condition.</a></p>
+            </details>
+        </div>
+    </section>
+
+    <section id="faqs" style="padding: var(--section-padding);">
+        <div class="container" style="max-width: 850px;">
+            <h2 class="section-title">Frequently Asked Questions</h2>
+            
+            <details>
+                <summary>Does this calculator guarantee the price you will pay for my house?</summary>
+                <p>No. The calculator is an educational tool. It uses indicative percentages to demonstrate how a direct offer compares to the costs of selling on the open market. Any formal offer from SB Properties UK is based on an individual assessment of your specific property.</p>
+            </details>
+
+            <details>
+                <summary>Why do cash buyers offer below market value?</summary>
+                <p>A direct cash buyer provides speed, certainty, and pays in cash without requiring mortgage approval. In exchange for absorbing the holding costs, market risks, and conveyancing time, the offer is typically below the theoretical maximum open-market value. <a href="../../blog/estate-agent-costs-vs-cash-buyer/" class="body-link">Read our full breakdown of costs here.</a></p>
+            </details>
+
+            <details>
+                <summary>Do I still need a Home Report for a direct sale?</summary>
+                <p>Usually, no. In Scotland, a Home Report is legally required when marketing a property to the public. If you sell directly and privately before marketing, this requirement is not triggered, saving you the upfront cost. <a href="../../blog/sell-house-scotland-no-home-report/" class="body-link">Read our Home Report guide.</a></p>
+            </details>
+        </div>
+    </section>
+
+    <!-- CONTACT SECTION -->
+    <section id="contact" class="bg-black" style="padding: var(--section-padding); color: white;">
+        <div class="container">
+            <div style="max-width: 600px; margin: 0 auto; text-align: center;">
+                <h2 style="color: white; margin-bottom: 20px;">Request a Property-Specific Assessment</h2>
+                <p style="color: #d1d1d1; margin-bottom: 30px;">
+                    Skip the estimates. Tell us about your property and we will provide a genuine, no-obligation review based on actual data. No pressure, no hassle.
+                </p>
+                <a href="../../#contact" class="btn btn-primary">Receive a No-Obligation Property Review</a>
+            </div>
+        </div>
+    </section>
+</main>
+
+<footer>
+    <div class="container">
+        <div class="footer-grid">
+            <div class="nap" aria-label="Business contact details">
+                <p style="margin-bottom: 10px;"><strong>SB Properties UK</strong><br>
+                    Direct Cash Buyer — Glasgow City Centre &amp; Central Scotland
+                </p>
+                <p style="margin-bottom: 10px;">
+                    <strong>Phone:</strong> <a href="tel:07346739722">07346739722</a><br>
+                    <strong>Email:</strong> <a href="mailto:info@sbproperties.uk">info@sbproperties.uk</a>
+                </p>
+            </div>
+
+            <div>
+                <p style="margin-bottom: 10px;"><strong>Useful Links</strong></p>
+                <div class="footer-links">
+                    <a href="../../">Home</a>
+                    <a href="../../blog/estate-agent-costs-vs-cash-buyer/">Agent vs Cash Buyer</a>
+                    <a href="../../sell-house-fast-tenanted-property-scotland/">Tenanted Property</a>
+                    <a href="../../blog/clearing-selling-inherited-house-scotland/">Inherited Property</a>
+                    <a href="../../privacy/">Privacy Policy</a>
+                    <a href="../../terms/">Terms</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <div>&copy; <span class="dynamic-date">2026</span> SB Properties UK. All rights reserved.</div>
+            <div style="font-size: 0.85rem; color: #a0a0a0; margin-top: 15px;">
+                STB Properties UK LTD | Office 1, Technology House, 9 Newton Place, Glasgow G3 7PR | Company Number: SC884935
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- CALCULATOR LOGIC (Vanilla JS) -->
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    
+    // Elements
+    const elMarketValue = document.getElementById('marketValue');
+    const elMortgage = document.getElementById('mortgageBalance');
+    
+    const elAgentFee = document.getElementById('agentFee');
+    const elMarketingFee = document.getElementById('marketingFee');
+    const elHomeReport = document.getElementById('homeReport');
+    const elLegalFee = document.getElementById('legalFee');
+    const elHoldingCost = document.getElementById('holdingCost');
+    const elMonthsToSell = document.getElementById('monthsToSell');
+    const elDirectDiscount = document.getElementById('directDiscount');
+    
+    const toggleBtn = document.getElementById('toggleAssumptions');
+    const panel = document.getElementById('assumptionsPanel');
+    const btnReset = document.getElementById('btnReset');
+
+    // UI Result Elements
+    const resMarketNet = document.getElementById('resMarketNet');
+    const resMarketGross = document.getElementById('resMarketGross');
+    const resMarketAgent = document.getElementById('resMarketAgent');
+    const resMarketSetup = document.getElementById('resMarketSetup');
+    const resMarketHolding = document.getElementById('resMarketHolding');
+    const resMarketLegal = document.getElementById('resMarketLegal');
+    const resMarketCash = document.getElementById('resMarketCash');
+    const txtMonths = document.getElementById('txtMonths');
+
+    const resDirectNet = document.getElementById('resDirectNet');
+    const resDirectGross = document.getElementById('resDirectGross');
+    const resDirectHolding = document.getElementById('resDirectHolding');
+    const resDirectLegal = document.getElementById('resDirectLegal');
+    const resDirectCash = document.getElementById('resDirectCash');
+
+    // Formatting Helpers
+    const parseCurrency = (val) => parseFloat(val.toString().replace(/[^0-9.]/g, '')) || 0;
+    const formatCurrency = (val) => new Intl.NumberFormat('en-GB', { style: 'currency', currency: 'GBP', maximumFractionDigits: 0 }).format(val);
+    
+    // Toggle Advanced Panel
+    toggleBtn.addEventListener('click', () => {
+        const isExpanded = toggleBtn.getAttribute('aria-expanded') === 'true';
+        toggleBtn.setAttribute('aria-expanded', !isExpanded);
+        panel.classList.toggle('open');
+    });
+
+    // Defaults for Reset
+    const defaults = {
+        agentFee: "1.25", marketingFee: "350", homeReport: "500", legalFee: "1200",
+        holdingCost: "600", monthsToSell: "4", directDiscount: "15"
+    };
+
+    btnReset.addEventListener('click', () => {
+        elAgentFee.value = defaults.agentFee;
+        elMarketingFee.value = defaults.marketingFee;
+        elHomeReport.value = defaults.homeReport;
+        elLegalFee.value = defaults.legalFee;
+        elHoldingCost.value = defaults.holdingCost;
+        elMonthsToSell.value = defaults.monthsToSell;
+        elDirectDiscount.value = defaults.directDiscount;
+        calculate();
+    });
+
+    // Core Calculation Logic
+    function calculate() {
+        const marketVal = parseCurrency(elMarketValue.value);
+        const mortgage = parseCurrency(elMortgage.value);
+        
+        const agentPct = parseFloat(elAgentFee.value) || 0;
+        const marketFee = parseFloat(elMarketingFee.value) || 0;
+        const hrCost = parseFloat(elHomeReport.value) || 0;
+        const legalCost = parseFloat(elLegalFee.value) || 0;
+        const holdingMonthly = parseFloat(elHoldingCost.value) || 0;
+        const months = parseFloat(elMonthsToSell.value) || 0;
+        const discountPct = parseFloat(elDirectDiscount.value) || 0;
+
+        // --- Open Market Math ---
+        const agentFeeGross = (marketVal * (agentPct / 100)) * 1.2; // Add 20% VAT
+        const marketHoldingTotal = holdingMonthly * months;
+        const marketSetupTotal = marketFee + hrCost;
+        
+        const marketTotalCosts = agentFeeGross + marketSetupTotal + marketHoldingTotal + legalCost;
+        const marketNet = marketVal - marketTotalCosts;
+        const marketCash = marketNet - mortgage;
+
+        // --- Direct Sale Math ---
+        const directGross = marketVal * (1 - (discountPct / 100));
+        const directHoldingTotal = holdingMonthly * 1; // Assume 1 month completion
+        const directNet = directGross - legalCost - directHoldingTotal;
+        const directCash = directNet - mortgage;
+
+        // --- Update DOM ---
+        resMarketGross.textContent = formatCurrency(marketVal);
+        resMarketAgent.textContent = formatCurrency(agentFeeGross);
+        resMarketSetup.textContent = formatCurrency(marketSetupTotal);
+        resMarketHolding.textContent = formatCurrency(marketHoldingTotal);
+        resMarketLegal.textContent = formatCurrency(legalCost);
+        resMarketNet.textContent = formatCurrency(marketNet);
+        resMarketCash.textContent = formatCurrency(Math.max(0, marketCash));
+        txtMonths.textContent = months;
+
+        resDirectGross.textContent = formatCurrency(directGross);
+        resDirectHolding.textContent = formatCurrency(directHoldingTotal);
+        resDirectLegal.textContent = formatCurrency(legalCost);
+        resDirectNet.textContent = formatCurrency(directNet);
+        resDirectCash.textContent = formatCurrency(Math.max(0, directCash));
+    }
+
+    // Event Listeners for Live Update
+    const inputs = [elMarketValue, elMortgage, elAgentFee, elMarketingFee, elHomeReport, elLegalFee, elHoldingCost, elMonthsToSell, elDirectDiscount];
+    
+    inputs.forEach(input => {
+        input.addEventListener('input', calculate);
+    });
+
+    // Formatting on Blur for visual cleanliness
+    [elMarketValue, elMortgage].forEach(input => {
+        input.addEventListener('blur', (e) => {
+            const val = parseCurrency(e.target.value);
+            e.target.value = new Intl.NumberFormat('en-GB').format(val);
+        });
+        
+        // Remove commas on focus for easier editing
+        input.addEventListener('focus', (e) => {
+            e.target.value = e.target.value.replace(/,/g, '');
+            e.target.select();
+        });
+    });
+
+    // Initial Calc
+    calculate();
+});
+</script>
+
+</body>
+</html>
