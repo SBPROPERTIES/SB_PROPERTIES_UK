@@ -7,7 +7,7 @@ blogFiles.forEach(file => {
     let content = fs.readFileSync(`blog/${file}`, 'utf8');
 
     // Fix relative paths for images in the blog/ directory to point up to root
-    content = content.replace(/src="logo.webp"/g, 'src="../logo.webp"');
+    content = content.replace(/src="assets\/brand-logo\.png"/g, 'src="../assets/brand-logo.png"');
     
     // Fix navigation link hrefs
     content = content.replace(/href="blog\/index\.html"/g, 'href="index.html"'); // Blog to Blog Hub Link

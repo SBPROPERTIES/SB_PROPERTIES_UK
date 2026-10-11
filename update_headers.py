@@ -28,9 +28,9 @@ def process_file(filepath):
         blog_path = blog_match.group(1)
 
     # We want to replace the phone anchor tag.
-    # It usually looks like: <a href="tel:07346739722"...>07346739722</a>
+    # It usually looks like: <a href="tel:07367079485"...>07367079485</a>
     # Or similarly. Let's find exactly that.
-    phone_regex = r'(<a href="tel:07346739722"[^>]*>07346739722</a>)'
+    phone_regex = r'(<a href="tel:07367079485"[^>]*>07367079485</a>)'
     
     match = re.search(phone_regex, content)
     if not match:
@@ -51,7 +51,7 @@ def process_file(filepath):
                 <a href="{blog_path}" aria-label="Blog">
                     <svg viewBox="0 0 24 24" width="22" height="22" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path></svg>
                 </a>
-                <a href="tel:07346739722" aria-label="Call Us">
+                <a href="tel:07367079485" aria-label="Call Us">
                     <svg viewBox="0 0 24 24" width="22" height="22" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
                 </a>
             </div>
@@ -60,7 +60,7 @@ def process_file(filepath):
     # We replace the old phone tag with classes that actually work (desktop-phone)
     # The old tag might have style="...", class="phone-link", etc.
     # We will just rewrite the tag clean to ensure it works.
-    new_phone_tag = f'<a href="tel:07346739722" class="desktop-phone" style="font-weight:900; color:black; text-decoration:none;">07346739722</a>'
+    new_phone_tag = f'<a href="tel:07367079485" class="desktop-phone" style="font-weight:900; color:black; text-decoration:none;">07367079485</a>'
     
     # Only replace the FIRST occurrence in the header (which is usually the only one but just in case)
     # Actually, we can just replace all occurrences of `old_phone_tag` in the `header-actions` block.
