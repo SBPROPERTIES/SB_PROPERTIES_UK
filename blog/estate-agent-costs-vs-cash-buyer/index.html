@@ -9,7 +9,7 @@
     <link rel="canonical" href="https://sbproperties.uk/blog/estate-agent-costs-vs-cash-buyer/">
 
     <link rel="icon" href="../../favicon.ico" sizes="any">
-    <link rel="icon" type="image/webp" href="../../assets/brand-logo.png">
+    <link rel="icon" type="image/webp" href="../../logo.webp">
 
     <!-- Social Meta -->
     <meta property="og:title" content="Estate Agent vs Cash Buyer: Costs Compared (UK 2026)">
@@ -23,13 +23,92 @@
     <meta name="twitter:image" content="https://sbproperties.uk/Images/blog/estate-agent-vs-cash-buyer-uk-1200x630.jpg">
 
     <!-- Schema -->
-    <script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@context": "https://schema.org", "@type": "Article", "headline": "Estate Agent vs Cash Buyer: Costs Compared (UK 2026)", "description": "Compare estate agent fees vs cash house buyers in the UK. Discover the true costs, timelines, and which option is best for you.", "image": "https://sbproperties.uk/Images/blog/estate-agent-vs-cash-buyer-uk-1200x630.jpg", "author": {"@id": "https://sbproperties.uk/#business"}, "publisher": {"@id": "https://sbproperties.uk/#business"}, "datePublished": "2026-03-17", "dateModified": "2026-10-11", "@id": "https://sbproperties.uk/blog/estate-agent-costs-vs-cash-buyer/#article", "mainEntityOfPage": {"@id": "https://sbproperties.uk/blog/estate-agent-costs-vs-cash-buyer/#page"}, "inLanguage": "en-GB"}]}</script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      "headline": "Estate Agent vs Cash Buyer: Costs Compared (UK 2026)",
+      "description": "Compare estate agent fees vs cash house buyers in the UK. Discover the true costs, timelines, and which option is best for you.",
+      "image": "https://sbproperties.uk/Images/blog/estate-agent-vs-cash-buyer-uk-1200x630.jpg",
+      "author": {
+        "@type": "Organization",
+        "name": "SB Properties UK"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "SB Properties UK",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://sbproperties.uk/logo.webp"
+        }
+      },
+      "datePublished": "2026-03-17",
+      "dateModified": "2026-03-17"
+    }
+    </script>
 
-
-
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-HMFSX14PT5"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-HMFSX14PT5');
+    </script>
 
     <!-- Dynamic Date Script -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            try {
+                const now = new Date();
+                const monthNames = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+                const curMonth = monthNames[now.getMonth()];
+                const curYear = now.getFullYear();
+                const dateStr = curMonth + " " + curYear;
+                const isoDate = now.toISOString().split('T')[0];
 
+                const updateTag = (selector, attr, oldVal, newVal) => {
+                    const el = document.querySelector(selector);
+                    if (el) {
+                        const current = attr ? el.getAttribute(attr) : el.innerText;
+                        if (current && current.includes(oldVal)) {
+                            if (attr) el.setAttribute(attr, current.replace(oldVal, newVal));
+                            else el.innerText = current.replace(oldVal, newVal);
+                        }
+                    }
+                };
+
+                // Title
+                if (document.title.includes('2026')) {
+                    document.title = document.title.replace('2026', dateStr);
+                }
+
+                // Meta Tags
+                updateTag('meta[name="description"]', 'content', '2026', dateStr);
+                updateTag('meta[property="og:title"]', 'content', '2026', dateStr);
+                updateTag('meta[property="og:description"]', 'content', '2026', dateStr);
+                updateTag('meta[name="twitter:title"]', 'content', '2026', dateStr);
+                updateTag('meta[name="twitter:description"]', 'content', '2026', dateStr);
+
+                // Schema
+                const schemaScripts = document.querySelectorAll('script[type="application/ld+json"]');
+                schemaScripts.forEach(script => {
+                    try {
+                        let json = JSON.parse(script.innerHTML);
+                        let modified = false;
+                        if (json.dateModified) { json.dateModified = isoDate; modified = true; }
+                        const updateStr = (s) => (typeof s === 'string' && s.includes('2026')) ? (modified = true, s.replace(/2026/g, dateStr)) : s;
+                        if (json.headline) json.headline = updateStr(json.headline);
+                        if (json.description) json.description = updateStr(json.description);
+                        if (modified) script.innerHTML = JSON.stringify(json, null, 2);
+                    } catch(e) {}
+                });
+
+                // UI Elements
+                const dateDisplays = document.querySelectorAll('.dynamic-date');
+                dateDisplays.forEach(el => el.innerText = dateStr);
+            } catch (e) { console.error('Date engine error:', e); }
+        });
+    </script>
 
     <style>
         :root {
@@ -53,18 +132,18 @@
         .nav-flex { display: flex; justify-content: space-between; align-items: center; gap: 14px; }
         .logo { font-size: 1.1rem; font-weight: 950; color: var(--black); display: flex; align-items: center; gap: 10px; white-space: nowrap; text-decoration: none; }
         .logo img { height: 44px; width: auto; display: block; }
-
+        
         .article-hero { background: var(--black); color: var(--white); padding: 60px 0; text-align: center; }
         .article-hero h1 { font-size: 2.5rem; font-weight: 900; margin-bottom: 20px; line-height: 1.1; color: var(--white); }
         .meta-strip { font-size: 0.9rem; color: #ddd; margin-bottom: 30px; }
-
+        
         .content { padding: 60px 20px; }
         .content h2 { font-size: 1.8rem; font-weight: 900; margin: 40px 0 20px; border-left: 5px solid var(--primary); padding-left: 15px; }
         .content h3 { font-size: 1.4rem; font-weight: 800; margin: 30px 0 15px; }
         .content p { margin-bottom: 20px; font-size: 1.1rem; }
         .content ul, .content ol { margin-bottom: 20px; padding-left: 20px; }
         .content li { margin-bottom: 10px; font-size: 1.1rem; }
-
+        
         .box { background: var(--light-grey); padding: 30px; border-radius: var(--border-radius); border-left: 5px solid var(--primary); margin: 40px 0; }
         .box h4 { font-weight: 900; margin-bottom: 10px; }
 
@@ -78,7 +157,7 @@
         footer { background: var(--black); color: #ccc; padding: 60px 0; font-size: 0.95rem; }
         .footer-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; }
         @media (max-width: 600px) { .footer-grid { grid-template-columns: 1fr; } .article-hero h1 { font-size: 2rem; } }
-
+        
         .footer-eeat { border-top: 1px solid #333; padding-top: 30px; margin-top: 30px; display: flex; justify-content: space-between; flex-wrap: wrap; gap: 20px; }
         .ico-badge { border: 1px solid #444; padding: 10px; border-radius: 8px; display: flex; align-items: center; gap: 10px; }
 
@@ -167,25 +246,25 @@
             color: #666;
             margin-top: 10px;
         }
-
+    
         .form-wrapper-standard {
-            background: white;
-            padding: 30px;
-            border-radius: var(--border-radius);
-            color: var(--text-color);
+            background: white; 
+            padding: 30px; 
+            border-radius: var(--border-radius); 
+            color: var(--text-color); 
             border: 1px solid rgba(0,0,0,0.08);
             box-shadow: 0 10px 30px rgba(0,0,0,0.05);
         }
         @media (min-width: 600px) {
             .form-wrapper-standard { padding: 30px; }
         }
-
+    
         @media (max-width: 600px) {
             #contact { padding: 40px 0 !important; }
             #contact .container { padding: 0 !important; }
             .form-wrapper-standard { padding: 15px !important; border-radius: 0; border-left: none; border-right: none; }
         }
-
+    
         /* Mobile Header Icons CSS */
         .mobile-icons { display: none; }
         .desktop-phone { display: none; }
@@ -201,24 +280,13 @@
 
 
 
-<link rel="stylesheet" href="/assets/conversion.css">
-<script defer src="/assets/analytics.js"></script>
-<script defer src="/assets/conversion.js"></script>
-
-<meta property="og:site_name" content="SB Properties UK">
-<meta property="og:locale" content="en_GB">
-
-
-
-<script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "Organization", "@id": "https://sbproperties.uk/#business", "name": "SB Properties UK", "legalName": "STB Properties UK LTD", "url": "https://sbproperties.uk/", "logo": "https://sbproperties.uk/assets/brand-logo.png", "telephone": "+447367079485", "email": "info@sbproperties.uk", "address": {"@type": "PostalAddress", "streetAddress": "Office 1, Technology House, 9 Newton Place", "addressLocality": "Glasgow", "postalCode": "G3 7PR", "addressCountry": "GB"}, "areaServed": ["Glasgow", "Central Scotland"], "description": "Property buying and investor introductions for homeowners considering an off-market sale in Glasgow and Central Scotland."}, {"@type": "WebSite", "@id": "https://sbproperties.uk/#website", "url": "https://sbproperties.uk/", "name": "SB Properties UK", "publisher": {"@id": "https://sbproperties.uk/#business"}, "inLanguage": "en-GB"}, {"@type": "BreadcrumbList", "@id": "https://sbproperties.uk/blog/estate-agent-costs-vs-cash-buyer/#breadcrumb", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://sbproperties.uk/"}, {"@type": "ListItem", "position": 2, "name": "Seller guides", "item": "https://sbproperties.uk/blog/"}, {"@type": "ListItem", "position": 3, "name": "Estate Agent vs Cash Buyer: Costs Compared (UK 2026)", "item": "https://sbproperties.uk/blog/estate-agent-costs-vs-cash-buyer/"}]}, {"@type": "WebPage", "@id": "https://sbproperties.uk/blog/estate-agent-costs-vs-cash-buyer/#page", "url": "https://sbproperties.uk/blog/estate-agent-costs-vs-cash-buyer/", "name": "Estate Agent vs Cash Buyer: Costs Compared (UK 2026)", "description": "Compare estate agent fees vs cash house buyers in the UK. Discover the true costs, timelines, and which option is best for you.", "isPartOf": {"@id": "https://sbproperties.uk/#website"}, "about": {"@id": "https://sbproperties.uk/#business"}, "inLanguage": "en-GB", "breadcrumb": {"@id": "https://sbproperties.uk/blog/estate-agent-costs-vs-cash-buyer/#breadcrumb"}}]}</script>
-<meta name="robots" content="index,follow,max-image-preview:large">
 </head>
-<body class="sb-legacy"><a class="sb-skip" href="#sb-main">Skip to content</a>
+<body>
 
 <header>
     <div class="container nav-flex">
         <a href="../../" class="logo">
-            <img src="../../assets/brand-logo.png" alt="SB Properties UK" width="48" height="48">
+            <img src="../../logo.webp" alt="SB Properties UK">
             <span>SB Properties</span>
         </a>
         <div class="header-actions">
@@ -226,7 +294,7 @@
                 <a href="../../" class="nav-link">Home</a>
                 <a href="../../blog/" class="nav-link">Blog</a>
             </nav>
-
+            
             <!-- Mobile Icons -->
             <div class="mobile-icons">
                 <a href="../../blog/" aria-label="Blog">
@@ -238,49 +306,87 @@
             </div>
 
             <a href="tel:07367079485" class="desktop-phone" style="font-weight:900; color:black; text-decoration:none;">07367079485</a>
-            <a href="#contact" class="btn btn-primary">Discuss Property</a>
+            <a href="#contact" class="btn btn-primary">Get Offer</a>
         </div>
     </div>
 </header>
 
-<main id="sb-main"><nav class="sb-breadcrumb" aria-label="Breadcrumb"><div class="container"><a href="/">Home</a> <span aria-hidden="true">/</span> <a href="/blog/">Seller guides</a> <span aria-hidden="true">/</span> <span aria-current="page">Estate Agent vs Cash Buyer: Costs Compared (UK 2026)</span></div></nav><article>
+<article>
     <div class="article-hero">
         <div class="container">
             <h1>Estate Agent vs Cash Buyer: Costs Compared (UK 2026)</h1>
-            <div class="meta-strip">By SB Properties UK &bull; Content updated: <time datetime="2026-10-11">11 October 2026</time></div>
-            <img src="../../Images/blog/estate-agent-vs-cash-buyer-uk-1200x630.jpg" alt="Estate agent vs cash buyer comparison hero image" style="width: 100%; height: auto; border-radius: 10px; margin-top: 20px; display: block;" loading="eager" width="1312" height="656">
+            <div class="meta-strip">
+                Written by SB Properties UK Expert Team • Last Updated: <span class="dynamic-date">2026</span>
+            </div>
+            <img src="../../Images/blog/estate-agent-vs-cash-buyer-uk-1200x630.jpg" alt="Estate agent vs cash buyer comparison hero image" style="width: 100%; height: auto; border-radius: 10px; margin-top: 20px; display: block;" loading="eager" width="1200" height="630">
         </div>
     </div>
 
     <div class="container content">
-        <p>Compare the sale price after all costs and mortgage repayment, not just the advertised agent fee. Request written quotes for each route and check VAT, conditions and any costs payable if the sale does not proceed.</p><nav class="box sb-guide-toc" aria-label="In this guide"><strong>In this guide</strong><ul><li><a href="#guide-section-1">Considering selling a property in Scotland?</a></li><li><a href="#guide-section-2">The &quot;Hidden&quot; Costs of an Estate Agent Sale</a></li><li><a href="#guide-section-3">Compare the whole transaction</a></li><li><a href="#guide-section-4">The Cost of Time (The Stealth Expense)</a></li><li><a href="#guide-section-5">Why Cash Buyers offer &quot;Net&quot; Value</a></li><li><a href="#guide-section-6">Conclusion</a></li></ul></nav><aside class="sb-callout" aria-label="Property sale enquiry"><p class="sb-eyebrow">For property owners considering a sale</p><h2 id="guide-section-1">Considering selling a property in Scotland?</h2><p>If the property needs work or a straightforward sale would help, discuss your options with us. We may buy directly or introduce suitable investors. Offers may be below open-market value.</p><a class="sb-link" href="#contact" data-sb-cta="article-intro">Discuss my property ↗</a></aside>
+        <p>When you see a "Fixed Fee" or "1%" estate agent sign, it’s easy to assume that’s the final cost of your sale. However, the reality of the Scottish property market in 2026 is far more expensive once you pull back the curtain.</p>
+        
+        <p>This guide breaks down every single cost involved in a traditional sale versus a direct cash sale with SB Properties UK, so you can decide which route keeps more money in your pocket.</p>
 
-        <p>Whether you are comparing high-street agents or looking for <a href="../cash-home-buyers-paisley/">cash home buyers in Paisley</a>, this guide breaks down every single cost involved in a traditional sale versus a direct cash sale with SB Properties UK, so you can decide which route keeps more money in your pocket.</p>
-
-        <h2 id="guide-section-2">The "Hidden" Costs of an Estate Agent Sale</h2>
+        <h2>The "Hidden" Costs of an Estate Agent Sale</h2>
         <p>Selling through an agent in Glasgow or across Scotland involves several upfront and back-end costs that most people forget to calculate:</p>
-
+        
         <h3>1. The Home Report (£350 - £900)</h3>
-        <p>A Home Report is normally required when a Scottish home is marketed. Cash payment alone is not an exemption. A genuinely private transaction without marketing may be treated differently; ask your solicitor to confirm the requirements, including any EPC, before advertising or agreeing terms.</p>
+        <p>In Scotland, you legally cannot list your house without a Home Report. For a £150,000 property, this will cost you around £450-£600 upfront. If your house doesn't sell within 3 months, many buyers will ask for a "refreshed" report, costing you even more money in 2026.</p>
 
         <h3>2. Marketing & Photography (£200 - £500)</h3>
-        <p>Ask the agent whether photography, listings, accompanied viewings and other marketing are included, and what is payable upfront or if the sale does not complete.</p>
+        <p>Most agents charge a "Marketing Fee" up front. This covers professional photos, a "For Sale" board, and listings on portals like Rightmove and Zoopla. You pay this even if the house never sells.</p>
 
         <h3>3. Real-World Estate Agent Fees (1% - 1.5% + VAT)</h3>
-        <p>Fees can be fixed or percentage-based. For illustration only, a 1.25% fee on a £200,000 sale is £2,500 before VAT. Use the written quote and applicable VAT in your comparison; this example is not a market average.</p>
+        <p>While some offer fixed fees, the industry average is still around 1.25%. 
+        <br><strong>Calculation:</strong> House Price £200k x 1.25% = £2,500 + VAT (£500) = <strong>£3,000</strong>.</p>
 
         <h3>4. Solicitors & Conveyancing (£1,200 - £2,500)</h3>
-        <p>Ask your solicitor for a quote covering the transaction and any additional work. Charging structures differ; do not assume every email is separately charged or that a direct buyer will pay your bill.</p>
+        <p>Traditional sales involve more legal back-and-forth, especially if there's a property chain involved. You'll be billed for every email, phone call, and amendment to the missives.</p>
 
-        <h2 id="guide-section-3">Compare the whole transaction</h2>
+        <h2>The Comparison Table: Typical £150k Property Sale</h2>
+        
+        <table>
+            <thead>
+                <tr>
+                    <th>Expense</th>
+                    <th>Estate Agent Route</th>
+                    <th>SB Properties (Cash)</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Home Report</td>
+                    <td>£500 (You Pay)</td>
+                    <td><strong>£0</strong> (Not Needed)</td>
+                </tr>
+                <tr>
+                    <td>Marketing / Professional Photos</td>
+                    <td>£350 (You Pay)</td>
+                    <td><strong>£0</strong></td>
+                </tr>
+                <tr>
+                    <td>Commission / Agency Fee</td>
+                    <td>£2,250 (Inc. VAT)</td>
+                    <td><strong>£0</strong></td>
+                </tr>
+                <tr>
+                    <td>Holding Costs (4 months average)</td>
+                    <td>£3,500 (Mortgage, Tax, Bills)</td>
+                    <td><strong>£0</strong> (7 Day Sale)</td>
+                </tr>
+                <tr>
+                    <td><strong>Total Direct Costs</strong></td>
+                    <td><strong>£6,600+</strong></td>
+                    <td><strong>£0</strong></td>
+                </tr>
+            </tbody>
+        </table>
 
-        <div class="sb-table-scroll" tabindex="0" role="region" aria-label="Comparison table; scroll horizontally on small screens"><table><thead><tr><th>Comparison item</th><th>Agent or auction route</th><th>Direct or introduced buyer</th></tr></thead><tbody><tr><td>Sale price</td><td>Estimate using comparable evidence; final price depends on offers.</td><td>Use the written offer, including any discount and conditions.</td></tr><tr><td>Marketing and fees</td><td>Use the written quote, including VAT and unsold-property charges.</td><td>Confirm costs and existing agency obligations in writing.</td></tr><tr><td>Home Report and EPC</td><td>Check requirements before marketing.</td><td>Cash payment alone does not remove requirements.</td></tr><tr><td>Legal and lender costs</td><td>Obtain solicitor and mortgage redemption figures.</td><td>Obtain the same figures and any written cost contribution.</td></tr><tr><td>Holding costs</td><td>Budget for the estimated period and a delay.</td><td>Costs continue until the relevant liabilities end.</td></tr></tbody></table></div>
-
-        <h2 id="guide-section-4">The Cost of Time (The Stealth Expense)</h2>
-        <p>The longer you own the property, the longer some costs continue. Compare a realistic timetable with a delayed scenario, using your actual bills.</p>
-
+        <h2>The Cost of Time (The Stealth Expense)</h2>
+        <p>This is the most overlooked expense in 2026. The average time to sell a house in Scotland via an agent is currently 4-5 months from listing to completion.</p>
+        
         <div class="box">
-            <h4>Illustrative holding-cost calculation</h4><p>The figures below are assumptions for an example, not verified average bills. Replace them with your own costs.</p>
+            <h4>Calculate your "Holding Costs"</h4>
             <p>Every month your house sits on the market, you are paying:
             <ul>
                 <li>Council Tax (£150/mo)</li>
@@ -290,31 +396,30 @@
             <strong>Total: £850 per month.</strong> In 4 months, you've spent <strong>£3,400</strong> just keeping the house empty while waiting for a buyer.</p>
         </div>
 
-        <h2 id="guide-section-5">Calculate the amount you would retain</h2>
-        <p>The offer price is not necessarily the amount you retain. Deduct mortgage redemption, applicable fees, taxes and other liabilities. Agree any contribution to costs in writing. SB Properties may buy directly or discuss an introduction to suitable investors. We assess the property and explain the route before any commitment. Offers may be below open-market value, and price, costs and timing are subject to assessment and legal checks.</p>
+        <h2>Why Cash Buyers offer "Net" Value</h2>
+        <p>When SB Properties makes you an offer, that is the <strong>Exact Amount</strong> you receive. There are no subtractions. We buy the property "As-Is", so you don't even have to spend money on repairs, cleaning, or staging.</p>
 
         <div style="text-align: center; margin: 50px 0;">
             <h3>Check Your Net Walkaway Price</h3>
             <p>Get a no-obligation quote today and compare it to your agent's "estimated" sale price.</p>
-            <a href="../../#contact" class="btn">Discuss your property</a>
+            <a href="../../#contact" class="btn">Get a Guaranteed Offer Now</a>
         </div>
 
-        <h2 id="guide-section-6">Conclusion</h2>
+        <h2>Conclusion</h2>
         <p>An Estate Agent might get you a higher "headline" price on paper, but after you strip away the Home Report, marketing, commission, legal fees, and months of bills, the actual amount landing in your bank account is often much lower.</p>
         <p>If you value speed, certainty, and zero out-of-pocket costs, a cash sale with SB Properties UK is the smartest financial move in 2026.</p>
-    <section class="box" aria-label="Sources and next steps"><h2>Sources and your next step</h2><p>General information for property owners; ask a Scottish solicitor or appropriate adviser about your circumstances. The source links were checked for this content update on 11 October 2026.</p><ul><li><a href="https://www.mygov.scot/sell-home/first-steps">mygov.scot: preparing to sell</a></li><li><a href="https://www.mygov.scot/sell-home/missives">mygov.scot: missives</a></li></ul><h3>Related seller guidance</h3><ul><li><a href="/blog/sell-house-scotland-no-home-report/">Check Home Report requirements</a></li></ul><p><a href="/">Explore our property sale service</a> or <a href="#contact">discuss your property</a>. We may buy directly or discuss an investor introduction; offers may be below open-market value.</p></section>
-</div>
-</article></main>
+    </div>
+</article>
 
 
     <section id="contact" class="bg-black" style="padding: var(--section-padding); color: white;">
-        <div class="container"><div class="sb-model-note"><strong>Your sale, your choice.</strong> SB Properties may buy directly or discuss an introduction to suitable investors. Offers may be below open-market value. We explain the route and ask before sharing your contact details. <a href="/about/" style="text-decoration:underline">How we buy</a>.</div>
+        <div class="container">
             <div class="contact-container">
 
                 <div class="contact-info">
-                    <h2 style="color: white;">Discuss Your Property</h2>
+                    <h2 style="color: white;">Get Your Free Cash Offer</h2>
                     <p style="color: #d1d1d1;">
-                        Fill in the form and we’ll get back to you after reviewing your enquiry. No hard sell — just a practical conversation about your options.
+                        Fill in the form and we’ll get back to you within 24 hours. No hard sell — just a practical conversation about your options.
                     </p>
 
                     <div style="margin-top: 24px;">
@@ -344,27 +449,32 @@
                 </div>
 
                 <div class="form-wrapper-standard">
-                    <h3 style="margin-bottom: 12px;">Discuss Your Property</h3>
+                    <h3 style="margin-bottom: 12px;">Request a Call Back</h3>
                     <p class="form-note" style="margin-bottom: 18px;">
-                        Share the property postcode and your contact details. We’ll discuss the options before you decide.
+                        Share your details and we’ll confirm a convenient time to speak. Your information is handled privately.
                     </p>
 
-                    <form id="leadForm" class="sb-form" action="https://formspree.io/f/mwpyrrke" method="POST">
-    <p class="sb-form-context">Start with the basics. We’ll discuss your property and explain whether a direct purchase or an investor introduction could suit you.</p>
-    <div class="sb-fields">
-      <div class="form-group sb-full"><label for="postcode">Property postcode</label><input id="postcode" name="postcode" autocomplete="postal-code" placeholder="e.g. G41 2AB" maxlength="12" required></div>
-      <div class="form-group"><label for="name">Your name</label><input id="name" name="name" autocomplete="name" placeholder="Your name" maxlength="120" required></div>
-      <div class="form-group"><label for="phone">Phone number</label><input id="phone" name="phone" type="tel" autocomplete="tel" placeholder="Your contact number" maxlength="35" required></div>
-    </div>
-    <details><summary>Add property details (optional)</summary>
-      <div class="form-group"><label for="email">Email address (optional)</label><input id="email" name="email" type="email" autocomplete="email" placeholder="you@example.com" maxlength="254"></div>
-      <div class="form-group"><label for="timeline">When would you like to sell?</label><select id="timeline" name="timeline"><option value="">Choose if you know</option><option>As soon as practical</option><option>Within 1–3 months</option><option>My timing is flexible</option><option>Just exploring my options</option></select></div>
-      <div class="form-group"><label for="message">What should we know?</label><textarea id="message" name="message" rows="3" maxlength="4000" placeholder="Repairs needed, an inherited property, tenants, or a sale that fell through…"></textarea></div>
-    </details>
-    <button type="submit" class="sb-submit">Discuss my property <span aria-hidden="true">↗</span></button>
-    <p class="sb-form-note">No obligation to accept an offer. By submitting, you ask us to contact you about your enquiry. We’ll ask before sharing your contact details with investors. <a href="/privacy/">Privacy policy</a>.</p>
-    <input type="hidden" name="page_path" value="/blog/estate-agent-costs-vs-cash-buyer/">
-</form>
+                    <form id="leadForm" action="https://formspree.io/f/mwpyrrke" method="POST">
+                        <div class="form-group">
+                            <label for="name">Name</label>
+                            <input type="text" id="name" name="name" placeholder="Your Name" required autocomplete="name">
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Phone Number</label>
+                            <input type="tel" id="phone" name="phone" placeholder="07123 456 789" required autocomplete="tel">
+                        </div>
+                        <div class="form-group">
+                            <label for="postcode">Property Postcode</label>
+                            <input type="text" id="postcode" name="postcode" placeholder="e.g. G1 1AB" autocomplete="postal-code">
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Any details? (Optional)</label>
+                            <textarea id="message" name="message" rows="4" placeholder="Tell us about the property..."></textarea>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary btn-full-width">Request Call Back</button>
+                        <p class="form-note">By submitting, you agree we can contact you about your enquiry. See our Privacy Policy for details.</p>
+                    </form>
                 </div>
 
             </div>
@@ -375,7 +485,7 @@
         <div class="footer-grid">
             <div>
                 <strong style="color:white; display:block; margin-bottom:15px;">SB Properties UK</strong>
-                <p>Property buying and investor introductions for owners in Glasgow and Central Scotland.</p>
+                <p>Specialist Cash House Buyers in Scotland. We provide fair, fast solutions for probate, repossession, and tenanted properties.</p>
             </div>
             <div>
                 <strong style="color:white; display:block; margin-bottom:15px;">Contact Info</strong>
@@ -394,14 +504,13 @@
             G3 7PR<br>
                 Company Registration Number: SC884935
             </div>
-
+            
         </div>
         <div style="margin-top:20px; text-align:center; font-size:0.85rem;">
             &copy; 2026 SB Properties UK. All rights reserved.
         </div>
     </div>
-<div class="sb-business-note"><strong>Property buying &amp; investor introductions.</strong> We may buy directly or discuss an introduction with your permission. Offers may be below open-market value. <a href="/about/">About SB Properties</a>.</div></footer>
+</footer>
 
-<nav class="sb-mobile-actions" aria-label="Quick contact"><a href="tel:07367079485">Call us</a><a class="sb-action-main" href="#contact" data-sb-cta="mobile">Discuss my property ↗</a></nav>
 </body>
 </html>

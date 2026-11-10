@@ -1,8 +1,4 @@
 User-agent: *
 Allow: /
-Disallow: /research/
-Disallow: /Search-Data/
-Disallow: /.git/
-Disallow: /tools/*.py
 
 Sitemap: https://sbproperties.uk/sitemap.xml

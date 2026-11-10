@@ -9,7 +9,7 @@
     <link rel="canonical" href="https://sbproperties.uk/blog/stop-house-repossession-scotland/">
 
     <link rel="icon" href="../../favicon.ico" sizes="any">
-    <link rel="icon" type="image/webp" href="../../assets/brand-logo.png">
+    <link rel="icon" type="image/webp" href="../../logo.webp">
 
     <!-- Social Meta -->
     <meta property="og:title" content="How to Stop House Repossession in Scotland (2026 Guide)">
@@ -23,13 +23,93 @@
     <meta name="twitter:image" content="https://sbproperties.uk/Images/blog/stop-house-repossession-scotland-1200x630.jpg">
 
     <!-- Schema -->
-    <script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@context": "https://schema.org", "@type": "Article", "headline": "How to Stop House Repossession in Scotland (2026 Guide)", "description": "Worried about mortgage arrears? Learn how repossession works in Scotland, what support may be available, and when selling quickly could help you regain control.", "image": "https://sbproperties.uk/Images/blog/stop-house-repossession-scotland-1200x630.jpg", "author": {"@id": "https://sbproperties.uk/#business"}, "publisher": {"@id": "https://sbproperties.uk/#business"}, "mainEntityOfPage": {"@id": "https://sbproperties.uk/blog/stop-house-repossession-scotland/#page"}, "datePublished": "2026-03-18", "dateModified": "2026-10-11", "@id": "https://sbproperties.uk/blog/stop-house-repossession-scotland/#article", "inLanguage": "en-GB"}]}</script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      "headline": "How to Stop House Repossession in Scotland (2026 Guide)",
+      "description": "Worried about mortgage arrears? Learn how repossession works in Scotland, what support may be available, and when selling quickly could help you regain control.",
+      "image": "https://sbproperties.uk/Images/blog/stop-house-repossession-scotland-1200x630.jpg",
+      "author": {
+        "@type": "Organization",
+        "name": "SB Properties UK"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "SB Properties UK",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://sbproperties.uk/logo.webp"
+        }
+      },
+      "mainEntityOfPage": "https://sbproperties.uk/blog/stop-house-repossession-scotland/",
+      "datePublished": "2026-03-18",
+      "dateModified": "2026-03-18"
+    }
+    </script>
 
-
-
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-HMFSX14PT5"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-HMFSX14PT5');
+    </script>
 
     <!-- Dynamic Date Script -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            try {
+                const now = new Date();
+                const monthNames = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+                const curMonth = monthNames[now.getMonth()];
+                const curYear = now.getFullYear();
+                const dateStr = curMonth + " " + curYear;
+                const isoDate = now.toISOString().split('T')[0];
 
+                const updateTag = (selector, attr, oldVal, newVal) => {
+                    const el = document.querySelector(selector);
+                    if (el) {
+                        const current = attr ? el.getAttribute(attr) : el.innerText;
+                        if (current && current.includes(oldVal)) {
+                            if (attr) el.setAttribute(attr, current.replace(oldVal, newVal));
+                            else el.innerText = current.replace(oldVal, newVal);
+                        }
+                    }
+                };
+
+                // Title
+                if (document.title.includes('2026')) {
+                    document.title = document.title.replace('2026', dateStr);
+                }
+
+                // Meta Tags
+                updateTag('meta[name="description"]', 'content', '2026', dateStr);
+                updateTag('meta[property="og:title"]', 'content', '2026', dateStr);
+                updateTag('meta[property="og:description"]', 'content', '2026', dateStr);
+                updateTag('meta[name="twitter:title"]', 'content', '2026', dateStr);
+                updateTag('meta[name="twitter:description"]', 'content', '2026', dateStr);
+
+                // Schema
+                const schemaScripts = document.querySelectorAll('script[type="application/ld+json"]');
+                schemaScripts.forEach(script => {
+                    try {
+                        let json = JSON.parse(script.innerHTML);
+                        let modified = false;
+                        if (json.dateModified) { json.dateModified = isoDate; modified = true; }
+                        const updateStr = (s) => (typeof s === 'string' && s.includes('2026')) ? (modified = true, s.replace(/2026/g, dateStr)) : s;
+                        if (json.headline) json.headline = updateStr(json.headline);
+                        if (json.description) json.description = updateStr(json.description);
+                        if (modified) script.innerHTML = JSON.stringify(json, null, 2);
+                    } catch(e) {}
+                });
+
+                // UI Elements
+                const dateDisplays = document.querySelectorAll('.dynamic-date');
+                dateDisplays.forEach(el => el.innerText = dateStr);
+            } catch (e) { console.error('Date engine error:', e); }
+        });
+    </script>
 
     <style>
         :root {
@@ -53,18 +133,18 @@
         .nav-flex { display: flex; justify-content: space-between; align-items: center; gap: 14px; }
         .logo { font-size: 1.1rem; font-weight: 950; color: var(--black); display: flex; align-items: center; gap: 10px; white-space: nowrap; text-decoration: none; }
         .logo img { height: 44px; width: auto; display: block; }
-
+        
         .article-hero { background: var(--black); color: var(--white); padding: 60px 0; text-align: center; }
         .article-hero h1 { font-size: 2.5rem; font-weight: 900; margin-bottom: 20px; line-height: 1.1; color: var(--white); }
         .meta-strip { font-size: 0.9rem; color: #ddd; margin-bottom: 30px; }
-
+        
         .content { padding: 60px 20px; }
         .content h2 { font-size: 1.8rem; font-weight: 900; margin: 40px 0 20px; border-left: 5px solid var(--primary); padding-left: 15px; }
         .content h3 { font-size: 1.4rem; font-weight: 800; margin: 30px 0 15px; }
         .content p { margin-bottom: 20px; font-size: 1.1rem; }
         .content ul, .content ol { margin-bottom: 20px; padding-left: 20px; }
         .content li { margin-bottom: 10px; font-size: 1.1rem; }
-
+        
         .box { background: var(--light-grey); padding: 30px; border-radius: var(--border-radius); border-left: 5px solid var(--primary); margin: 40px 0; }
         .box h4 { font-weight: 900; margin-bottom: 10px; }
 
@@ -78,7 +158,7 @@
         footer { background: var(--black); color: #ccc; padding: 60px 0; font-size: 0.95rem; }
         .footer-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; }
         @media (max-width: 600px) { .footer-grid { grid-template-columns: 1fr; } .article-hero h1 { font-size: 2rem; } }
-
+        
         .footer-eeat { border-top: 1px solid #333; padding-top: 30px; margin-top: 30px; display: flex; justify-content: space-between; flex-wrap: wrap; gap: 20px; }
         .ico-badge { border: 1px solid #444; padding: 10px; border-radius: 8px; display: flex; align-items: center; gap: 10px; }
 
@@ -167,25 +247,25 @@
             color: #666;
             margin-top: 10px;
         }
-
+    
         .form-wrapper-standard {
-            background: white;
-            padding: 30px;
-            border-radius: var(--border-radius);
-            color: var(--text-color);
+            background: white; 
+            padding: 30px; 
+            border-radius: var(--border-radius); 
+            color: var(--text-color); 
             border: 1px solid rgba(0,0,0,0.08);
             box-shadow: 0 10px 30px rgba(0,0,0,0.05);
         }
         @media (min-width: 600px) {
             .form-wrapper-standard { padding: 30px; }
         }
-
+    
         @media (max-width: 600px) {
             #contact { padding: 40px 0 !important; }
             #contact .container { padding: 0 !important; }
             .form-wrapper-standard { padding: 15px !important; border-radius: 0; border-left: none; border-right: none; }
         }
-
+    
         /* Mobile Header Icons CSS */
         .mobile-icons { display: none; }
         .desktop-phone { display: none; }
@@ -199,24 +279,13 @@
         }
 </style>
 
-<link rel="stylesheet" href="/assets/conversion.css">
-<script defer src="/assets/analytics.js"></script>
-<script defer src="/assets/conversion.js"></script>
-
-<meta property="og:site_name" content="SB Properties UK">
-<meta property="og:locale" content="en_GB">
-
-
-
-<script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "Organization", "@id": "https://sbproperties.uk/#business", "name": "SB Properties UK", "legalName": "STB Properties UK LTD", "url": "https://sbproperties.uk/", "logo": "https://sbproperties.uk/assets/brand-logo.png", "telephone": "+447367079485", "email": "info@sbproperties.uk", "address": {"@type": "PostalAddress", "streetAddress": "Office 1, Technology House, 9 Newton Place", "addressLocality": "Glasgow", "postalCode": "G3 7PR", "addressCountry": "GB"}, "areaServed": ["Glasgow", "Central Scotland"], "description": "Property buying and investor introductions for homeowners considering an off-market sale in Glasgow and Central Scotland."}, {"@type": "WebSite", "@id": "https://sbproperties.uk/#website", "url": "https://sbproperties.uk/", "name": "SB Properties UK", "publisher": {"@id": "https://sbproperties.uk/#business"}, "inLanguage": "en-GB"}, {"@type": "BreadcrumbList", "@id": "https://sbproperties.uk/blog/stop-house-repossession-scotland/#breadcrumb", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://sbproperties.uk/"}, {"@type": "ListItem", "position": 2, "name": "Seller guides", "item": "https://sbproperties.uk/blog/"}, {"@type": "ListItem", "position": 3, "name": "How to Stop House Repossession in Scotland (2026 Guide)", "item": "https://sbproperties.uk/blog/stop-house-repossession-scotland/"}]}, {"@type": "WebPage", "@id": "https://sbproperties.uk/blog/stop-house-repossession-scotland/#page", "url": "https://sbproperties.uk/blog/stop-house-repossession-scotland/", "name": "How to Stop House Repossession in Scotland (2026 Guide)", "description": "Worried about mortgage arrears? Learn how repossession works in Scotland, what support may be available, and when selling quickly could help you regain control.", "isPartOf": {"@id": "https://sbproperties.uk/#website"}, "about": {"@id": "https://sbproperties.uk/#business"}, "inLanguage": "en-GB", "breadcrumb": {"@id": "https://sbproperties.uk/blog/stop-house-repossession-scotland/#breadcrumb"}}]}</script>
-<meta name="robots" content="index,follow,max-image-preview:large">
 </head>
-<body class="sb-legacy"><a class="sb-skip" href="#sb-main">Skip to content</a>
+<body>
 
 <header>
     <div class="container nav-flex">
         <a href="../../" class="logo">
-            <img src="../../assets/brand-logo.png" alt="SB Properties UK" width="48" height="48">
+            <img src="../../logo.webp" alt="SB Properties UK">
             <span>SB Properties</span>
         </a>
         <div class="header-actions">
@@ -224,7 +293,7 @@
                 <a href="../../" class="nav-link">Home</a>
                 <a href="../../blog/" class="nav-link">Blog</a>
             </nav>
-
+            
             <!-- Mobile Icons -->
             <div class="mobile-icons">
                 <a href="../../blog/" aria-label="Blog">
@@ -236,35 +305,37 @@
             </div>
 
             <a href="tel:07367079485" class="desktop-phone" style="font-weight:900; color:black; text-decoration:none;">07367079485</a>
-            <a href="#contact" class="btn btn-primary">Discuss Property</a>
+            <a href="#contact" class="btn btn-primary">Get Offer</a>
         </div>
     </div>
 </header>
 
-<main id="sb-main"><nav class="sb-breadcrumb" aria-label="Breadcrumb"><div class="container"><a href="/">Home</a> <span aria-hidden="true">/</span> <a href="/blog/">Seller guides</a> <span aria-hidden="true">/</span> <span aria-current="page">How to Stop House Repossession in Scotland (2026 Guide)</span></div></nav><article>
+<article>
     <div class="article-hero">
         <div class="container">
             <h1>How to Stop House Repossession in Scotland (2026 Guide)</h1>
-            <div class="meta-strip">By SB Properties UK &bull; Content updated: <time datetime="2026-10-11">11 October 2026</time></div>
-            <img src="../../Images/blog/stop-house-repossession-scotland-1200x630.jpg" alt="Worried homeowner outside a house in Scotland reading a mortgage arrears or repossession notice" style="width: 100%; height: auto; border-radius: 10px; margin-top: 20px; display: block;" loading="eager" width="1312" height="656">
+            <div class="meta-strip">
+                Written by SB Properties UK Expert Team • Last Updated: <span class="dynamic-date">2026</span>
+            </div>
+            <img src="../../Images/blog/stop-house-repossession-scotland-1200x630.jpg" alt="Worried homeowner outside a house in Scotland reading a mortgage arrears or repossession notice" style="width: 100%; height: auto; border-radius: 10px; margin-top: 20px; display: block;" loading="eager" width="1200" height="630">
         </div>
     </div>
 
     <div class="container content">
         <div class="box" style="margin-top:0;">
             <h4>Quick Answer: Can I Stop Repossession in Scotland?</h4>
-            <p>There may be options to avoid or postpone repossession, depending on your circumstances. Contact your lender and an independent debt or housing adviser promptly, and keep any court deadlines. A property enquiry, offer or proposed sale does not automatically pause legal action.</p><nav class="box sb-guide-toc" aria-label="In this guide"><strong>In this guide</strong><ul><li><a href="#guide-section-1">Considering selling a property in Scotland?</a></li><li><a href="#guide-section-2">What Does Repossession Actually Mean?</a></li><li><a href="#guide-section-3">Early Warning Signs: What Documents Will You Receive?</a></li><li><a href="#guide-section-4">The Scottish &quot;Pre-Action Requirements&quot;</a></li><li><a href="#guide-section-5">Support Options Before Repossession</a></li><li><a href="#guide-section-6">Why a Voluntary Fast Sale Might Be Your Best Move</a></li><li><a href="#guide-section-7">What to Do Today</a></li></ul></nav><aside class="sb-callout" aria-label="Property sale enquiry"><p class="sb-eyebrow">For property owners considering a sale</p><h2 id="guide-section-1">Considering selling a property in Scotland?</h2><p>If the property needs work or a straightforward sale would help, discuss your options with us. We may buy directly or introduce suitable investors. Offers may be below open-market value.</p><a class="sb-link" href="#contact" data-sb-cta="article-intro">Discuss my property ↗</a></aside>
+            <p>Yes, repossession is not inevitable. In Scotland, your lender must follow strict legal procedures including "pre-action requirements" before taking you to court. You have options such as negotiating a new payment plan, applying to the Home Owners’ Support Fund, checking if you're eligible for Mortgage Charter relief, or completing a fast voluntary sale of your property to clear the debt and protect your credit file before a court order is granted.</p>
         </div>
 
         <p>Falling behind on mortgage payments is terrifying, especially when letters with red ink start arriving. If you're struggling to keep up with your mortgage in Scotland, you are not alone. Rising living costs and changing interest rates have put unprecedented pressure on homeowners.</p>
+        
+        <p>However, bury your head in the sand is the worst thing you can do. In Scotland, the law requires lenders to treat repossession as an absolute last resort. This means you have rights, you have time, and you have options—but you must act quickly.</p>
 
-        <p>Keep the correspondence and seek advice promptly. <a href="https://www.mygov.scot/repossession">Scottish Government repossession guidance</a> links to independent housing advice and explains the options to discuss.</p>
-
-        <h2 id="guide-section-2">What Does Repossession Actually Mean?</h2>
+        <h2>What Does Repossession Actually Mean?</h2>
         <p>In simple terms, repossession is a legal process where your mortgage lender takes ownership of your home because you have broken the terms of your mortgage agreement (usually by missing payments). They do this to sell the property and recover the money they lent you.</p>
-        <p>A voluntary sale may help address secured debt, but you need to establish the net proceeds, lender requirements and a realistic timetable. Missed payments and other adverse credit information are not erased simply because a property is sold.</p>
+        <p>It’s important to understand the difference between a voluntary sale and a forced repossession. If you sell the house voluntarily before the court grants an order, you have control over the sale, you dictate the timeframe, and you avoid having a repossession recorded on your credit file—which can severely restrict your ability to borrow or rent in the future.</p>
 
-        <h2 id="guide-section-3">Early Warning Signs: What Documents Will You Receive?</h2>
+        <h2>Early Warning Signs: What Documents Will You Receive?</h2>
         <p>You won't suddenly wake up to find the locks changed. The process follows a clear set of steps:</p>
         <ul>
             <li><strong>Arrears Letters:</strong> The first sign. Your lender will write to you noting missed payments.</li>
@@ -273,19 +344,19 @@
             <li><strong>Initial Writ:</strong> This means the lender has applied to the Sheriff Court. A hearing date will be set. Even at this late stage, you can still stop the process.</li>
         </ul>
 
-        <h2 id="guide-section-4">The Scottish "Pre-Action Requirements"</h2>
+        <h2>The Scottish "Pre-Action Requirements"</h2>
         <p>Under the Home Owner and Debtor Protection (Scotland) Act 2010, your lender cannot simply evict you. They are legally bound to follow "pre-action requirements" before raising court proceedings. Your lender must:</p>
         <ol>
             <li>Provide clear information about the total arrears and any charges.</li>
             <li>Make reasonable efforts to agree a way for you to repay the arrears (like a payment plan).</li>
-            <li>Consider the steps you are taking to address the default under the applicable pre-action requirements. An intention to sell is not an automatic bar to court action.</li>
+            <li>Not start court action if you are actively trying to fix the problem (for example, if you are actively negotiating a sale to clear the debt).</li>
             <li>Provide you with information on where to get free, independent debt advice (like Citizens Advice Scotland).</li>
         </ol>
 
-        <h2 id="guide-section-5">Support Options Before Repossession</h2>
-
+        <h2>Support Options Before Repossession</h2>
+        
         <h3>1. The Mortgage Charter</h3>
-        <p>Ask your lender what support it offers and whether any Mortgage Charter commitments apply to your mortgage and circumstances. Eligibility and exceptions matter; do not assume a fixed period of protection.</p>
+        <p>Over 90% of UK mortgage lenders have signed the UK Government's Mortgage Charter. If your lender is a signatory and you are generally up to date but struggling, they may allow you to switch to interest-only payments for six months, or extend your mortgage term. More importantly, Charter signatories have committed <em>not to force anyone to leave their home within 12 months of their first missed payment</em> without exceptional circumstances.</p>
 
         <h3>2. Home Owners' Support Fund (HOSF)</h3>
         <p>The Scottish Government operates the Home Owners' Support Fund, which has two main pathways for struggling owners:</p>
@@ -295,23 +366,23 @@
         </ul>
         <p>To access the HOSF, you must speak to an approved money adviser at <a href="https://www.cas.org.uk/" target="_blank" rel="noopener">Citizens Advice Scotland</a> or a local authority debt service.</p>
 
-        <h2 id="guide-section-6">Why a Voluntary Fast Sale Might Be Your Best Move</h2>
-        <p>Ask an independent adviser to assess affordable repayment options, benefits and support before deciding to sell. If a sale is appropriate, compare realistic proceeds and timing for different routes.</p>
-
+        <h2>Why a Voluntary Fast Sale Might Be Your Best Move</h2>
+        <p>If you cannot afford the ongoing mortgage, negotiating payment plans only delays the inevitable. Trying to sell your house on the open market through an estate agent can take 4-9 months, involves chain breakdowns, and costs money upfront for a Home Report. While you wait for an open-market buyer, your arrears (and lender penalty fees) keep growing.</p>
+        
         <p>Selling quickly to a direct cash buyer changes the equation:</p>
         <ul>
-            <li><strong>Legal action:</strong> provide evidence of a real offer to your lender and solicitor. Obtain confirmation of any agreement or court decision about a pause; an offer alone does not stop proceedings.</li>
-            <li><strong>Home Report:</strong> cash payment alone is not an exemption. Ask the solicitor what the marketing history and proposed transaction require.</li>
-            <li><strong>Credit position:</strong> selling does not erase missed-payment history or guarantee that no debt remains.</li>
-            <li><strong>Funding and timing:</strong> verify the buyer's funds and contract conditions. A cash buyer still needs legal checks.</li>
+            <li><strong>Stops Legal Action:</strong> If you can prove to your lender that you have accepted a firm, legitimate cash offer that will clear the debt, they will almost always pause court proceedings.</li>
+            <li><strong>No Home Report Required:</strong> If you sell directly to a cash buyer off-market, you do not need to pay for a Home Report.</li>
+            <li><strong>Protects Your Credit Rating:</strong> A voluntary sale ensures you aren't marked with a repossession, protecting your future financial health.</li>
+            <li><strong>Instant Certainty:</strong> No chains breaking, no waiting for a buyer's mortgage approval.</li>
         </ul>
 
-        <h2 id="guide-section-7">What to Do Today</h2>
+        <h2>What to Do Today</h2>
         <ol>
             <li><strong>Open your mail:</strong> Ignoring the problem makes it worse. Find out exactly what you owe.</li>
             <li><strong>Contact your lender:</strong> Let them know you are experiencing difficulty. You might be protected by the Mortgage Charter.</li>
             <li><strong>Seek independent advice:</strong> Speak to <a href="https://scotland.shelter.org.uk/" target="_blank" rel="noopener">Shelter Scotland</a> or a free debt charity.</li>
-            <li><strong>Compare your options:</strong> assess any proposed sale with your independent adviser and solicitor, including accommodation and a possible mortgage shortfall.</li>
+            <li><strong>Consider your exit strategy:</strong> If the debt is unmanageable, look into a fast, guaranteed sale to stop the bleeding.</li>
         </ol>
 
         <div class="box">
@@ -319,34 +390,33 @@
             <p><strong>Do not panic and abandon the property.</strong> If you hand back the keys, you are still liable for the debt, the building insurance, and the council tax until the bank sells it—and banks often sell repossessed homes far below market value.</p>
         </div>
 
-        <h2 id="guide-section-8">Frequently Asked Questions</h2>
+        <h2>Frequently Asked Questions</h2>
         <h3>Can my lender repossess my house without going to court in Scotland?</h3>
         <p>No. In Scotland, a lender must obtain a court order from the Sheriff Court to repossess your home. They must also prove they have followed all pre-action requirements.</p>
 
         <h3>Can I stop repossession after court action has started?</h3>
-        <p>Seek advice promptly about attending the hearing and any request for time or other remedy. The court decides the application; a proposed cash sale does not guarantee a pause.</p>
+        <p>Yes. You can attend the hearing (or have a representative attend) and ask the Sheriff for time to sell the property or establish a payment plan. If you have accepted a cash offer on the house, sheriffs are often willing to pause proceedings to allow the sale to complete.</p>
 
         <div style="text-align: center; margin: 50px 0;">
             <h3>Need to Stop a Repossession Fast?</h3>
-            <p>If you are considering selling because of mortgage arrears, we can discuss the property. An enquiry or proposed sale does not pause legal action. Contact your lender and seek independent debt and legal advice about the available options.</p>
-            <a href="../../#contact" class="btn">Discuss your property</a>
+            <p>If you're facing mortgage arrears and need a guaranteed, private exit strategy, we can help. We can provide a fast cash offer and work directly with your lender to pause legal action.</p>
+            <a href="../../#contact" class="btn">Get a Confidential Cash Offer</a>
         </div>
 
-        <h2 id="guide-section-9">Conclusion</h2>
-        <p>Continue dealing with lender and court correspondence while you seek independent advice. If selling is part of your plan, verify the buyer, net proceeds and conditions with your solicitor. SB Properties can discuss a possible purchase or investor introduction, but cannot guarantee debt clearance or prevent repossession.</p>
+        <h2>Conclusion</h2>
+        <p>House repossession in Scotland is a highly regulated, deliberate process designed to give homeowners multiple chances to find a solution. You have the power to stop the process, but decisive action is crucial.</p>
         <p>Whether you choose to negotiate with your bank, use government support, or clear your debt entirely through a <a href="../sell-house-fast-scotland/">fast property sale</a>, the worst thing you can do is wait. Take control of the situation today.</p>
-    <section class="box" aria-label="Sources and next steps"><h2>Sources and your next step</h2><p>General information for property owners; ask a Scottish solicitor or appropriate adviser about your circumstances. The source links were checked for this content update on 11 October 2026.</p><ul><li><a href="https://www.mygov.scot/repossession">mygov.scot: repossession advice</a></li><li><a href="https://www.gov.scot/publications/home-owner-debtor-protection-scotland-act-2010-guidance-pre-action-requirements-creditors/">Scottish Government: pre-action requirements</a></li></ul><h3>Related seller guidance</h3><ul><li><a href="/blog/estate-agent-costs-vs-cash-buyer/">Compare sale routes and costs</a></li><li><a href="/blog/sell-house-scotland-no-home-report/">Check Home Report requirements</a></li></ul><p><a href="/sell-house-fast-repossession-scotland/">Explore our property sale service</a> or <a href="#contact">discuss your property</a>. We may buy directly or discuss an investor introduction; offers may be below open-market value.</p></section>
-</div>
-</article></main>
+    </div>
+</article>
 
     <section id="contact" class="bg-black" style="padding: var(--section-padding); color: white;">
-        <div class="container"><div class="sb-model-note"><strong>Your sale, your choice.</strong> SB Properties may buy directly or discuss an introduction to suitable investors. Offers may be below open-market value. We explain the route and ask before sharing your contact details. <a href="/about/" style="text-decoration:underline">How we buy</a>.</div>
+        <div class="container">
             <div class="contact-container">
 
                 <div class="contact-info">
-                    <h2 style="color: white;">Discuss Your Property</h2>
+                    <h2 style="color: white;">Get Your Free Cash Offer</h2>
                     <p style="color: #d1d1d1;">
-                        Fill in the form and we’ll get back to you after reviewing your enquiry. No hard sell — just a practical conversation about your options.
+                        Fill in the form and we’ll get back to you within 24 hours. No hard sell — just a practical conversation about your options.
                     </p>
 
                     <div style="margin-top: 24px;">
@@ -376,27 +446,32 @@
                 </div>
 
                 <div class="form-wrapper-standard">
-                    <h3 style="margin-bottom: 12px;">Discuss Your Property</h3>
+                    <h3 style="margin-bottom: 12px;">Request a Call Back</h3>
                     <p class="form-note" style="margin-bottom: 18px;">
-                        Share the property postcode and your contact details. We’ll discuss the options before you decide.
+                        Share your details and we’ll confirm a convenient time to speak. Your information is handled privately.
                     </p>
 
-                    <form id="leadForm" class="sb-form" action="https://formspree.io/f/mwpyrrke" method="POST">
-    <p class="sb-form-context">Start with the basics. We’ll discuss your property and explain whether a direct purchase or an investor introduction could suit you.</p>
-    <div class="sb-fields">
-      <div class="form-group sb-full"><label for="postcode">Property postcode</label><input id="postcode" name="postcode" autocomplete="postal-code" placeholder="e.g. G41 2AB" maxlength="12" required></div>
-      <div class="form-group"><label for="name">Your name</label><input id="name" name="name" autocomplete="name" placeholder="Your name" maxlength="120" required></div>
-      <div class="form-group"><label for="phone">Phone number</label><input id="phone" name="phone" type="tel" autocomplete="tel" placeholder="Your contact number" maxlength="35" required></div>
-    </div>
-    <details><summary>Add property details (optional)</summary>
-      <div class="form-group"><label for="email">Email address (optional)</label><input id="email" name="email" type="email" autocomplete="email" placeholder="you@example.com" maxlength="254"></div>
-      <div class="form-group"><label for="timeline">When would you like to sell?</label><select id="timeline" name="timeline"><option value="">Choose if you know</option><option>As soon as practical</option><option>Within 1–3 months</option><option>My timing is flexible</option><option>Just exploring my options</option></select></div>
-      <div class="form-group"><label for="message">What should we know?</label><textarea id="message" name="message" rows="3" maxlength="4000" placeholder="Repairs needed, an inherited property, tenants, or a sale that fell through…"></textarea></div>
-    </details>
-    <button type="submit" class="sb-submit">Discuss my property <span aria-hidden="true">↗</span></button>
-    <p class="sb-form-note">No obligation to accept an offer. By submitting, you ask us to contact you about your enquiry. We’ll ask before sharing your contact details with investors. <a href="/privacy/">Privacy policy</a>.</p>
-    <input type="hidden" name="page_path" value="/blog/stop-house-repossession-scotland/">
-</form>
+                    <form id="leadForm" action="https://formspree.io/f/mwpyrrke" method="POST">
+                        <div class="form-group">
+                            <label for="name">Name</label>
+                            <input type="text" id="name" name="name" placeholder="Your Name" required autocomplete="name">
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Phone Number</label>
+                            <input type="tel" id="phone" name="phone" placeholder="07123 456 789" required autocomplete="tel">
+                        </div>
+                        <div class="form-group">
+                            <label for="postcode">Property Postcode</label>
+                            <input type="text" id="postcode" name="postcode" placeholder="e.g. G1 1AB" autocomplete="postal-code">
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Any details? (Optional)</label>
+                            <textarea id="message" name="message" rows="4" placeholder="Tell us about the property..."></textarea>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary btn-full-width">Request Call Back</button>
+                        <p class="form-note">By submitting, you agree we can contact you about your enquiry. See our Privacy Policy for details.</p>
+                    </form>
                 </div>
 
             </div>
@@ -407,7 +482,7 @@
         <div class="footer-grid">
             <div>
                 <strong style="color:white; display:block; margin-bottom:15px;">SB Properties UK</strong>
-                <p>Property buying and investor introductions for owners in Glasgow and Central Scotland.</p>
+                <p>Specialist Cash House Buyers in Scotland. We provide fair, fast solutions for probate, repossession, and tenanted properties.</p>
             </div>
             <div>
                 <strong style="color:white; display:block; margin-bottom:15px;">Contact Info</strong>
@@ -426,14 +501,13 @@
             G3 7PR<br>
                 Company Registration Number: SC884935
             </div>
-
+            
         </div>
         <div style="margin-top:20px; text-align:center; font-size:0.85rem;">
             &copy; <span class="dynamic-date">2026</span> SB Properties UK. All rights reserved.
         </div>
     </div>
-<div class="sb-business-note"><strong>Property buying &amp; investor introductions.</strong> We may buy directly or discuss an introduction with your permission. Offers may be below open-market value. <a href="/about/">About SB Properties</a>.</div></footer>
+</footer>
 
-<nav class="sb-mobile-actions" aria-label="Quick contact"><a href="tel:07367079485">Call us</a><a class="sb-action-main" href="#contact" data-sb-cta="mobile">Discuss my property ↗</a></nav>
 </body>
 </html>

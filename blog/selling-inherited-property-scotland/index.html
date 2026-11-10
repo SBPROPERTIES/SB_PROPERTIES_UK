@@ -9,7 +9,7 @@
     <link rel="canonical" href="https://sbproperties.uk/blog/selling-inherited-property-scotland/">
 
     <link rel="icon" href="../../favicon.ico" sizes="any">
-    <link rel="icon" type="image/webp" href="../../assets/brand-logo.png">
+    <link rel="icon" type="image/webp" href="../../logo.webp">
 
     <!-- Social Meta -->
     <meta property="og:title" content="Selling an Inherited Property in Scotland (2026 Guide)">
@@ -23,13 +23,92 @@
     <meta name="twitter:image" content="https://sbproperties.uk/Images/blog/selling-inherited-property-scotland-1200x630.jpg">
 
     <!-- Schema -->
-    <script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@context": "https://schema.org", "@type": "Article", "headline": "Selling an Inherited Property in Scotland (2026 Guide)", "description": "Sell an inherited property in Scotland quickly and easily. Learn your options, costs, and the fastest way to sell without stress.", "image": "https://sbproperties.uk/Images/blog/selling-inherited-property-scotland-1200x630.jpg", "author": {"@id": "https://sbproperties.uk/#business"}, "publisher": {"@id": "https://sbproperties.uk/#business"}, "datePublished": "2026-03-17", "dateModified": "2026-10-11", "@id": "https://sbproperties.uk/blog/selling-inherited-property-scotland/#article", "mainEntityOfPage": {"@id": "https://sbproperties.uk/blog/selling-inherited-property-scotland/#page"}, "inLanguage": "en-GB"}]}</script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      "headline": "Selling an Inherited Property in Scotland (2026 Guide)",
+      "description": "Sell an inherited property in Scotland quickly and easily. Learn your options, costs, and the fastest way to sell without stress.",
+      "image": "https://sbproperties.uk/Images/blog/selling-inherited-property-scotland-1200x630.jpg",
+      "author": {
+        "@type": "Organization",
+        "name": "SB Properties UK"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "SB Properties UK",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://sbproperties.uk/logo.webp"
+        }
+      },
+      "datePublished": "2026-03-17",
+      "dateModified": "2026-03-17"
+    }
+    </script>
 
-
-
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-HMFSX14PT5"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-HMFSX14PT5');
+    </script>
 
     <!-- Dynamic Date Script -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            try {
+                const now = new Date();
+                const monthNames = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+                const curMonth = monthNames[now.getMonth()];
+                const curYear = now.getFullYear();
+                const dateStr = curMonth + " " + curYear;
+                const isoDate = now.toISOString().split('T')[0];
 
+                const updateTag = (selector, attr, oldVal, newVal) => {
+                    const el = document.querySelector(selector);
+                    if (el) {
+                        const current = attr ? el.getAttribute(attr) : el.innerText;
+                        if (current && current.includes(oldVal)) {
+                            if (attr) el.setAttribute(attr, current.replace(oldVal, newVal));
+                            else el.innerText = current.replace(oldVal, newVal);
+                        }
+                    }
+                };
+
+                // Title
+                if (document.title.includes('2026')) {
+                    document.title = document.title.replace('2026', dateStr);
+                }
+
+                // Meta Tags
+                updateTag('meta[name="description"]', 'content', '2026', dateStr);
+                updateTag('meta[property="og:title"]', 'content', '2026', dateStr);
+                updateTag('meta[property="og:description"]', 'content', '2026', dateStr);
+                updateTag('meta[name="twitter:title"]', 'content', '2026', dateStr);
+                updateTag('meta[name="twitter:description"]', 'content', '2026', dateStr);
+
+                // Schema
+                const schemaScripts = document.querySelectorAll('script[type="application/ld+json"]');
+                schemaScripts.forEach(script => {
+                    try {
+                        let json = JSON.parse(script.innerHTML);
+                        let modified = false;
+                        if (json.dateModified) { json.dateModified = isoDate; modified = true; }
+                        const updateStr = (s) => (typeof s === 'string' && s.includes('2026')) ? (modified = true, s.replace(/2026/g, dateStr)) : s;
+                        if (json.headline) json.headline = updateStr(json.headline);
+                        if (json.description) json.description = updateStr(json.description);
+                        if (modified) script.innerHTML = JSON.stringify(json, null, 2);
+                    } catch(e) {}
+                });
+
+                // UI Elements
+                const dateDisplays = document.querySelectorAll('.dynamic-date');
+                dateDisplays.forEach(el => el.innerText = dateStr);
+            } catch (e) { console.error('Date engine error:', e); }
+        });
+    </script>
 
     <style>
         :root {
@@ -53,18 +132,18 @@
         .nav-flex { display: flex; justify-content: space-between; align-items: center; gap: 14px; }
         .logo { font-size: 1.1rem; font-weight: 950; color: var(--black); display: flex; align-items: center; gap: 10px; white-space: nowrap; text-decoration: none; }
         .logo img { height: 44px; width: auto; display: block; }
-
+        
         .article-hero { background: var(--black); color: var(--white); padding: 60px 0; text-align: center; }
         .article-hero h1 { font-size: 2.5rem; font-weight: 900; margin-bottom: 20px; line-height: 1.1; color: var(--white); }
         .meta-strip { font-size: 0.9rem; color: #ddd; margin-bottom: 30px; }
-
+        
         .content { padding: 60px 20px; }
         .content h2 { font-size: 1.8rem; font-weight: 900; margin: 40px 0 20px; border-left: 5px solid var(--primary); padding-left: 15px; }
         .content h3 { font-size: 1.4rem; font-weight: 800; margin: 30px 0 15px; }
         .content p { margin-bottom: 20px; font-size: 1.1rem; }
         .content ul, .content ol { margin-bottom: 20px; padding-left: 20px; }
         .content li { margin-bottom: 10px; font-size: 1.1rem; }
-
+        
         .box { background: var(--light-grey); padding: 30px; border-radius: var(--border-radius); border-left: 5px solid var(--primary); margin: 40px 0; }
         .box h4 { font-weight: 900; margin-bottom: 10px; }
 
@@ -74,7 +153,7 @@
         footer { background: var(--black); color: #ccc; padding: 60px 0; font-size: 0.95rem; }
         .footer-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; }
         @media (max-width: 600px) { .footer-grid { grid-template-columns: 1fr; } .article-hero h1 { font-size: 2rem; } }
-
+        
         .footer-eeat { border-top: 1px solid #333; padding-top: 30px; margin-top: 30px; display: flex; justify-content: space-between; flex-wrap: wrap; gap: 20px; }
         .ico-badge { border: 1px solid #444; padding: 10px; border-radius: 8px; display: flex; align-items: center; gap: 10px; }
 
@@ -163,25 +242,25 @@
             color: #666;
             margin-top: 10px;
         }
-
+    
         .form-wrapper-standard {
-            background: white;
-            padding: 30px;
-            border-radius: var(--border-radius);
-            color: var(--text-color);
+            background: white; 
+            padding: 30px; 
+            border-radius: var(--border-radius); 
+            color: var(--text-color); 
             border: 1px solid rgba(0,0,0,0.08);
             box-shadow: 0 10px 30px rgba(0,0,0,0.05);
         }
         @media (min-width: 600px) {
             .form-wrapper-standard { padding: 30px; }
         }
-
+    
         @media (max-width: 600px) {
             #contact { padding: 40px 0 !important; }
             #contact .container { padding: 0 !important; }
             .form-wrapper-standard { padding: 15px !important; border-radius: 0; border-left: none; border-right: none; }
         }
-
+    
         /* Mobile Header Icons CSS */
         .mobile-icons { display: none; }
         .desktop-phone { display: none; }
@@ -197,24 +276,13 @@
 
 
 
-<link rel="stylesheet" href="/assets/conversion.css">
-<script defer src="/assets/analytics.js"></script>
-<script defer src="/assets/conversion.js"></script>
-
-<meta property="og:site_name" content="SB Properties UK">
-<meta property="og:locale" content="en_GB">
-
-
-
-<script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "Organization", "@id": "https://sbproperties.uk/#business", "name": "SB Properties UK", "legalName": "STB Properties UK LTD", "url": "https://sbproperties.uk/", "logo": "https://sbproperties.uk/assets/brand-logo.png", "telephone": "+447367079485", "email": "info@sbproperties.uk", "address": {"@type": "PostalAddress", "streetAddress": "Office 1, Technology House, 9 Newton Place", "addressLocality": "Glasgow", "postalCode": "G3 7PR", "addressCountry": "GB"}, "areaServed": ["Glasgow", "Central Scotland"], "description": "Property buying and investor introductions for homeowners considering an off-market sale in Glasgow and Central Scotland."}, {"@type": "WebSite", "@id": "https://sbproperties.uk/#website", "url": "https://sbproperties.uk/", "name": "SB Properties UK", "publisher": {"@id": "https://sbproperties.uk/#business"}, "inLanguage": "en-GB"}, {"@type": "BreadcrumbList", "@id": "https://sbproperties.uk/blog/selling-inherited-property-scotland/#breadcrumb", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://sbproperties.uk/"}, {"@type": "ListItem", "position": 2, "name": "Seller guides", "item": "https://sbproperties.uk/blog/"}, {"@type": "ListItem", "position": 3, "name": "Selling an Inherited Property in Scotland (2026 Guide)", "item": "https://sbproperties.uk/blog/selling-inherited-property-scotland/"}]}, {"@type": "WebPage", "@id": "https://sbproperties.uk/blog/selling-inherited-property-scotland/#page", "url": "https://sbproperties.uk/blog/selling-inherited-property-scotland/", "name": "Selling an Inherited Property in Scotland (2026 Guide)", "description": "Sell an inherited property in Scotland quickly and easily. Learn your options, costs, and the fastest way to sell without stress.", "isPartOf": {"@id": "https://sbproperties.uk/#website"}, "about": {"@id": "https://sbproperties.uk/#business"}, "inLanguage": "en-GB", "breadcrumb": {"@id": "https://sbproperties.uk/blog/selling-inherited-property-scotland/#breadcrumb"}}]}</script>
-<meta name="robots" content="index,follow,max-image-preview:large">
 </head>
-<body class="sb-legacy"><a class="sb-skip" href="#sb-main">Skip to content</a>
+<body>
 
 <header>
     <div class="container nav-flex">
         <a href="../../" class="logo">
-            <img src="../../assets/brand-logo.png" alt="SB Properties UK" width="48" height="48">
+            <img src="../../logo.webp" alt="SB Properties UK">
             <span>SB Properties</span>
         </a>
         <div class="header-actions">
@@ -222,7 +290,7 @@
                 <a href="../../" class="nav-link">Home</a>
                 <a href="../../blog/" class="nav-link">Blog</a>
             </nav>
-
+            
             <!-- Mobile Icons -->
             <div class="mobile-icons">
                 <a href="../../blog/" aria-label="Blog">
@@ -234,81 +302,81 @@
             </div>
 
             <a href="tel:07367079485" class="desktop-phone" style="font-weight:900; color:black; text-decoration:none;">07367079485</a>
-            <a href="#contact" class="btn btn-primary">Discuss Property</a>
+            <a href="#contact" class="btn btn-primary">Get Offer</a>
         </div>
     </div>
 </header>
 
-<main id="sb-main"><nav class="sb-breadcrumb" aria-label="Breadcrumb"><div class="container"><a href="/">Home</a> <span aria-hidden="true">/</span> <a href="/blog/">Seller guides</a> <span aria-hidden="true">/</span> <span aria-current="page">Selling an Inherited Property in Scotland (2026 Guide)</span></div></nav><article>
+<article>
     <div class="article-hero">
         <div class="container">
             <h1>Selling an Inherited Property in Scotland (2026 Guide)</h1>
-            <div class="meta-strip">By SB Properties UK &bull; Content updated: <time datetime="2026-10-11">11 October 2026</time></div>
-            <img src="../../Images/blog/selling-inherited-property-scotland-1200x630.jpg" alt="Selling an inherited property in Scotland hero image" style="width: 100%; height: auto; border-radius: 10px; margin-top: 20px; display: block;" loading="eager" width="1201" height="601">
+            <div class="meta-strip">
+                Written by SB Properties UK Expert Team • Last Updated: <span class="dynamic-date">2026</span>
+            </div>
+            <img src="../../Images/blog/selling-inherited-property-scotland-1200x630.jpg" alt="Selling an inherited property in Scotland hero image" style="width: 100%; height: auto; border-radius: 10px; margin-top: 20px; display: block;" loading="eager" width="1200" height="630">
         </div>
     </div>
 
     <div class="container content">
-        <p>Losing a loved one is incredibly difficult, and dealing with their property can feel overwhelming. In Scotland, the legal process for handling an estate is unique and different from England or Wales.</p><nav class="box sb-guide-toc" aria-label="In this guide"><strong>In this guide</strong><ul><li><a href="#guide-section-1">Considering selling a property in Scotland?</a></li><li><a href="#guide-section-2">What is Confirmation in Scotland?</a></li><li><a href="#guide-section-3">Common Roadblocks for Inherited Sales</a></li><li><a href="#guide-section-4">When a direct sale may suit an inherited property</a></li><li><a href="#guide-section-5">Conclusion</a></li></ul></nav><aside class="sb-callout" aria-label="Property sale enquiry"><p class="sb-eyebrow">For property owners considering a sale</p><h2 id="guide-section-1">Considering selling a property in Scotland?</h2><p>If the property needs work or a straightforward sale would help, discuss your options with us. We may buy directly or introduce suitable investors. Offers may be below open-market value.</p><a class="sb-link" href="#contact" data-sb-cta="article-intro">Discuss my property ↗</a></aside>
+        <p>Losing a loved one is incredibly difficult, and dealing with their property can feel overwhelming. In Scotland, the legal process for handling an estate is unique and different from England or Wales.</p>
+        
+        <p>Whether you've inherited a tenement flat in Glasgow or a family home in Paisley, this 2026 guide explains exactly how to navigate the "Confirmation" process and your options for a fast, stress-free sale.</p>
 
-        <p>Whether the estate includes a Glasgow flat or an <a href="../cash-home-buyers-paisley/">inherited house in Paisley</a>, start by establishing who can act for the estate, what the property needs and which sale route fits the estate's responsibilities.</p>
-
-        <h2 id="guide-section-2">What is Confirmation in Scotland?</h2>
-        <p>Confirmation is the Scottish court process that can give an executor authority to deal with estate assets. It is often compared with probate in England and Wales, but the rules differ. Ask the estate solicitor whether Confirmation is required and who has authority to sell this particular property.</p>
-
+        <h2>What is Confirmation in Scotland?</h2>
+        <p>In Scotland, "Confirmation" is the legal document issued by the Sheriff Court that gives the executors authority to settle the estate and sell assets—including property. It is the Scottish equivalent of "Probate."</p>
+        
         <h3>1. The Initial Valuation</h3>
-        <p>The executor must prepare the estate information and valuations required for Confirmation and tax purposes. Ask the estate solicitor what evidence is needed; a buyer's informal assessment is not an independent estate valuation.</p>
+        <p>Before applying for Confirmation, you must value the entire estate. This includes the property's market value at the time of death. Even if you plan on getting a <strong>24 Hour Cash Offer</strong>, you will still need a formal valuation for the court forms.</p>
 
         <h3>2. Submitting Forms to the Sheriff Court</h3>
-        <p>The information and forms depend on the estate and its tax position. Prepare the inventory with appropriate advice and use the current Scottish Courts and HMRC requirements. Avoid promising a sale date before the estate solicitor confirms the necessary steps and likely timing.</p>
+        <p>Your solicitor will submit form C1 (the Inventory of the estate). If Inheritance Tax is due, additional HMRC forms (IHT400) are required. In 2026, the Sheriff Courts are processing these at varied speeds depending on the region.</p>
 
         <div class="box">
             <h4>Can you sell the house before Confirmation is granted?</h4>
-            <p>You can discuss potential sale options while the estate is being administered. Whether the property can be marketed, a binding contract agreed or ownership transferred at a particular stage depends on title and authority. Ask the estate solicitor before making commitments; a buyer's offer does not replace Confirmation where it is required.</p>
+            <p>You can <em>market</em> the property and even accept an offer, but you cannot legally "settle" (transfer the title and receive funds) until the Confirmation document is in your hands. This is why many executors choose a cash buyer—we can wait for the legal paperwork to clear while providing you with a guaranteed price upfront.</p>
         </div>
 
-        <h2 id="guide-section-3">Common Roadblocks for Inherited Sales</h2>
-        <p>These practical issues can affect an inherited sale through any route:</p>
+        <h2>Common Roadblocks for Inherited Sales</h2>
+        <p>Selling an inherited home often comes with challenges that traditional estate agents struggle to manage:</p>
         <ul>
             <li><strong>The "Clean-Out" Burden:</strong> Decades of belongings can take months to clear.</li>
             <li><strong>Condition Issues:</strong> Many inherited properties need significant modernization (new boilers, wiring, or damp treatment).</li>
-            <li><strong>Reports and repairs:</strong> A Home Report is normally needed for public marketing. Condition issues can affect value and mortgage availability. A cash offer is not itself an exemption.</li>
+            <li><strong>The Home Report Cost:</strong> In Scotland, the seller must pay upfront for a Home Report. If the house is in poor repair, the Home Report may highlight issues that scare off mortgage buyers.</li>
             <li><strong>Sibling Disputes:</strong> If multiple beneficiaries are involved, a long, drawn-out sale can create tension.</li>
         </ul>
-        <p>For practical next steps on how to manage these challenges, read our comprehensive guide on <a href="../clearing-selling-inherited-house-scotland/">clearing and selling an inherited house in Scotland</a>.</p>
 
-        <h2 id="guide-section-4">When a direct sale may suit an inherited property</h2>
-        <p>A direct offer may be useful for a property needing work or with contents remaining. It may also be lower than an open-market offer. Executors should take advice about their responsibilities and compare the price, costs and conditions before deciding.</p>
-
+        <h2>Why a Cash Sale is often the Best Choice for Executors</h2>
+        <p>At SB Properties UK, we specialize in helping families in these situations. By choosing a direct cash sale in 2026, you bypass the most stressful parts of the process:</p>
+        
         <ol>
-            <li><strong>Home Report:</strong> ask your solicitor which requirements apply to the marketing and proposed transaction.</li>
-            <li><strong>Net proceeds:</strong> Compare the offer after legal costs, any existing agency obligations and other agreed charges. Ask for all terms in writing.</li>
-            <li><strong>Contents:</strong> Tell the buyer what would remain and agree any clearance arrangement in writing. Confirm authority before disposing of estate belongings.</li>
-            <li><strong>Buyer and timing:</strong> SB Properties may buy directly or introduce an investor with your permission. Any purchase depends on assessment, agreement and legal checks.</li>
+            <li><strong>No Home Report Needed:</strong> We buy as-is, saving you the upfront fee and the stress of a surveyor poking around.</li>
+            <li><strong>Zero Fees:</strong> No estate agent commission. What we offer is what you get.</li>
+            <li><strong>Leave the Junk Behind:</strong> We can handle the clear-out. Take what you want to keep, and we'll deal with the rest.</li>
+            <li><strong>Speed & Certainty:</strong> Once Confirmation is granted, we can close in as little as 7 days. This allows you to distribute the estate funds to beneficiaries much faster.</li>
         </ol>
 
         <div style="text-align: center; margin: 50px 0;">
-            <h3>Considering a sale of an inherited property?</h3>
-            <p>Share the postcode, condition and estate's current stage for a no-obligation discussion.</p>
-            <a href="#contact" class="btn" data-sb-cta="inherited-next-step">Discuss the inherited property</a>
+            <h3>Need a Fast Valuation & Cash Offer?</h3>
+            <p>Get a direct, no-obligation offer for your inherited property today.</p>
+            <a href="../../#contact" class="btn">Request Your 24 Hour Cash Offer</a>
         </div>
 
-        <h2 id="guide-section-5">Conclusion</h2>
-        <p>Confirm authority, obtain suitable valuation advice and compare sale routes before committing the estate. Keep the property's security, insurance and ongoing costs under review while legal work progresses.</p>
-        <p>SB Properties can discuss a possible purchase or investor introduction for a property in Glasgow or Central Scotland. Your estate solicitor should advise on the legal and tax position.</p>
-    <section class="box" aria-label="Sources and next steps"><h2>Sources and your next step</h2><p>General information for property owners; ask a Scottish solicitor or appropriate adviser about your circumstances. The source links were checked for this content update on 11 October 2026.</p><ul><li><a href="https://www.scotcourts.gov.uk/taking-action/dealing-with-a-deceaseds-estate-in-scotland/guide-to-dealing-with-a-deceaseds-estate-in-scotland/">Scottish Courts: Confirmation</a></li></ul><h3>Related seller guidance</h3><ul><li><a href="/blog/estate-agent-costs-vs-cash-buyer/">Compare sale routes and costs</a></li><li><a href="/blog/sell-house-scotland-no-home-report/">Check Home Report requirements</a></li></ul><p><a href="/sell-house-fast-probate-scotland/">Explore our property sale service</a> or <a href="#contact">discuss your property</a>. We may buy directly or discuss an investor introduction; offers may be below open-market value.</p></section>
-</div>
-</article></main>
+        <h2>Conclusion</h2>
+        <p>Selling an inherited property doesn't have to be a second job. By understanding the Confirmation process and exploring a direct cash sale, you can settle the estate with dignity and move forward.</p>
+        <p>Our team at SB Properties UK is here to provide advice and a guaranteed exit strategy. Contact us in 2026 for a confidential chat about your inherited property.</p>
+    </div>
+</article>
 
 
     <section id="contact" class="bg-black" style="padding: var(--section-padding); color: white;">
-        <div class="container"><div class="sb-model-note"><strong>Your sale, your choice.</strong> SB Properties may buy directly or discuss an introduction to suitable investors. Offers may be below open-market value. We explain the route and ask before sharing your contact details. <a href="/about/" style="text-decoration:underline">How we buy</a>.</div>
+        <div class="container">
             <div class="contact-container">
 
                 <div class="contact-info">
-                    <h2 style="color: white;">Discuss Your Property</h2>
+                    <h2 style="color: white;">Get Your Free Cash Offer</h2>
                     <p style="color: #d1d1d1;">
-                        Fill in the form and we’ll get back to you after reviewing your enquiry. No hard sell — just a practical conversation about your options.
+                        Fill in the form and we’ll get back to you within 24 hours. No hard sell — just a practical conversation about your options.
                     </p>
 
                     <div style="margin-top: 24px;">
@@ -338,27 +406,32 @@
                 </div>
 
                 <div class="form-wrapper-standard">
-                    <h3 style="margin-bottom: 12px;">Discuss Your Property</h3>
+                    <h3 style="margin-bottom: 12px;">Request a Call Back</h3>
                     <p class="form-note" style="margin-bottom: 18px;">
-                        Share the property postcode and your contact details. We’ll discuss the options before you decide.
+                        Share your details and we’ll confirm a convenient time to speak. Your information is handled privately.
                     </p>
 
-                    <form id="leadForm" class="sb-form" action="https://formspree.io/f/mwpyrrke" method="POST">
-    <p class="sb-form-context">Start with the basics. We’ll discuss your property and explain whether a direct purchase or an investor introduction could suit you.</p>
-    <div class="sb-fields">
-      <div class="form-group sb-full"><label for="postcode">Property postcode</label><input id="postcode" name="postcode" autocomplete="postal-code" placeholder="e.g. G41 2AB" maxlength="12" required></div>
-      <div class="form-group"><label for="name">Your name</label><input id="name" name="name" autocomplete="name" placeholder="Your name" maxlength="120" required></div>
-      <div class="form-group"><label for="phone">Phone number</label><input id="phone" name="phone" type="tel" autocomplete="tel" placeholder="Your contact number" maxlength="35" required></div>
-    </div>
-    <details><summary>Add property details (optional)</summary>
-      <div class="form-group"><label for="email">Email address (optional)</label><input id="email" name="email" type="email" autocomplete="email" placeholder="you@example.com" maxlength="254"></div>
-      <div class="form-group"><label for="timeline">When would you like to sell?</label><select id="timeline" name="timeline"><option value="">Choose if you know</option><option>As soon as practical</option><option>Within 1–3 months</option><option>My timing is flexible</option><option>Just exploring my options</option></select></div>
-      <div class="form-group"><label for="message">What should we know?</label><textarea id="message" name="message" rows="3" maxlength="4000" placeholder="Repairs needed, an inherited property, tenants, or a sale that fell through…"></textarea></div>
-    </details>
-    <button type="submit" class="sb-submit">Discuss my property <span aria-hidden="true">↗</span></button>
-    <p class="sb-form-note">No obligation to accept an offer. By submitting, you ask us to contact you about your enquiry. We’ll ask before sharing your contact details with investors. <a href="/privacy/">Privacy policy</a>.</p>
-    <input type="hidden" name="page_path" value="/blog/selling-inherited-property-scotland/">
-</form>
+                    <form id="leadForm" action="https://formspree.io/f/mwpyrrke" method="POST">
+                        <div class="form-group">
+                            <label for="name">Name</label>
+                            <input type="text" id="name" name="name" placeholder="Your Name" required autocomplete="name">
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Phone Number</label>
+                            <input type="tel" id="phone" name="phone" placeholder="07123 456 789" required autocomplete="tel">
+                        </div>
+                        <div class="form-group">
+                            <label for="postcode">Property Postcode</label>
+                            <input type="text" id="postcode" name="postcode" placeholder="e.g. G1 1AB" autocomplete="postal-code">
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Any details? (Optional)</label>
+                            <textarea id="message" name="message" rows="4" placeholder="Tell us about the property..."></textarea>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary btn-full-width">Request Call Back</button>
+                        <p class="form-note">By submitting, you agree we can contact you about your enquiry. See our Privacy Policy for details.</p>
+                    </form>
                 </div>
 
             </div>
@@ -369,7 +442,7 @@
         <div class="footer-grid">
             <div>
                 <strong style="color:white; display:block; margin-bottom:15px;">SB Properties UK</strong>
-                <p>Property buying and investor introductions for owners in Glasgow and Central Scotland.</p>
+                <p>Specialist Cash House Buyers in Scotland. We provide fair, fast solutions for probate, repossession, and tenanted properties.</p>
             </div>
             <div>
                 <strong style="color:white; display:block; margin-bottom:15px;">Contact Info</strong>
@@ -388,14 +461,13 @@
             G3 7PR<br>
                 Company Registration Number: SC884935
             </div>
-
+            
         </div>
         <div style="margin-top:20px; text-align:center; font-size:0.85rem;">
             &copy; 2026 SB Properties UK. All rights reserved.
         </div>
     </div>
-<div class="sb-business-note"><strong>Property buying &amp; investor introductions.</strong> We may buy directly or discuss an introduction with your permission. Offers may be below open-market value. <a href="/about/">About SB Properties</a>.</div></footer>
+</footer>
 
-<nav class="sb-mobile-actions" aria-label="Quick contact"><a href="tel:07367079485">Call us</a><a class="sb-action-main" href="#contact" data-sb-cta="mobile">Discuss my property ↗</a></nav>
 </body>
 </html>
