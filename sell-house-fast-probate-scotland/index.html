@@ -745,6 +745,9 @@
         });
     </script>
 
+    <link rel="stylesheet" href="/assets/consent.css">
+    <script defer src="/assets/measurement.js"></script>
+    <script defer src="/assets/enquiry.js"></script>
 </head>
 
 <body>
@@ -1047,47 +1050,7 @@
 
 </main>
 
-<script>
-(function () {
-    const form = document.getElementById("leadForm");
-    if (!form) return;
 
-    form.addEventListener("submit", function () {
-        const payload = {
-            name: document.getElementById("name")?.value || "",
-            phone: document.getElementById("phone")?.value || "",
-            postcode: document.getElementById("postcode")?.value || "",
-            message: document.getElementById("message")?.value || "",
-            source: "sbproperties.uk",
-            page: window.location.href,
-            ts: new Date().toISOString()
-        };
-
-        /* Update to your HTTPS n8n domain */
-        const url = "https://YOUR-N8N-SSL-DOMAIN/webhook/sb-property-lead";
-
-        try {
-            const blob = new Blob([JSON.stringify(payload)], { type: "application/json" });
-            if (navigator.sendBeacon) {
-                navigator.sendBeacon(url, blob);
-                return;
-            }
-        } catch (e) {}
-
-        try {
-            const controller = new AbortController();
-            const t = setTimeout(() => controller.abort(), 1200);
-            fetch(url, {
-                method: "POST",
-                headers: { "Content-Type": "application/json" },
-                body: JSON.stringify(payload),
-                keepalive: true,
-                signal: controller.signal
-            }).finally(() => clearTimeout(t));
-        } catch (e) {}
-    });
-})();
-</script>
 
 <footer>
     <div class="container">

@@ -1,0 +1,9 @@
+#advertising-consent { position: fixed; bottom: 64px; left: 16px; z-index: 10000; width: min(520px, calc(100% - 32px)); max-height: 70vh; overflow: auto; padding: 20px; background: #fff; color: #222; border: 1px solid #555; border-radius: 10px; box-shadow: 0 4px 24px #0003; text-align: left; font: 16px/1.5 sans-serif; }
+#advertising-consent[hidden] { display: none; }
+#advertising-consent h2 { font-size: 20px; margin: 0 0 8px; color: #222; }
+#advertising-consent p { margin: 0 0 12px; color: #222; }
+#advertising-consent a { color: #245812; text-decoration: underline; }
+#advertising-consent div { display: flex; flex-wrap: wrap; gap: 10px; }
+#advertising-consent button, #advertising-settings { padding: 10px 16px; background: #fff; color: #222; border: 2px solid #325c20; border-radius: 6px; font: bold 14px/1.4 sans-serif; cursor: pointer; }
+#advertising-settings { position: fixed; bottom: 12px; left: 16px; z-index: 9999; }
+#advertising-consent button:focus-visible, #advertising-settings:focus-visible { outline: 3px solid #0066cc; outline-offset: 3px; }

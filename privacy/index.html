@@ -193,6 +193,9 @@
             .mobile-icons a { color: var(--black); display: flex; align-items: center; justify-content: center; }
         }
     </style>
+    <link rel="stylesheet" href="/assets/consent.css">
+    <script defer src="/assets/measurement.js"></script>
+    <script defer src="/assets/enquiry.js"></script>
 </head>
 <body>
 
@@ -233,7 +236,7 @@
 
 <div class="container">
     <div class="content-section">
-        <span class="last-updated">Last Updated: <span class="dynamic-date">November 2025</span></span>
+        <span class="last-updated">Last Updated: 11 November 2026</span>
 
         <p>At <strong>STB Properties UK LTD</strong> ("we", "us", "our"), we are committed to protecting and respecting your privacy. This policy explains how we collect, use, and protect the personal information you provide to us through our website.</p>
 
@@ -253,9 +256,11 @@
             <li>To communicate with you throughout the sales process.</li>
         </ul>
         <p>We do not use your data for marketing newsletters unless you explicitly opt-in.</p>
+        <p>With your advertising measurement consent, we also use the information described below to understand which advertisements lead to enquiries.</p>
 
         <h2>3. Data Sharing</h2>
         <p>We do not sell your personal data to third parties.</p>
+        <p>Our enquiry forms send the details you provide to Formspree, our form delivery provider, so that we can receive and respond to your enquiry. Advertising consent is optional and is not required to submit a form.</p>
         <p>We may share your information with trusted professional partners (such as solicitors or surveyors) only if it is necessary to progress your sale, and we will always inform you before doing so.</p>
 
         <h2>4. Data Security</h2>
@@ -270,7 +275,14 @@
             <li><strong>Object to processing</strong> of your personal data.</li>
         </ul>
 
-        <h2>6. Contact Us</h2>
+        <h2 id="advertising">6. Advertising Measurement and Cookies</h2>
+        <p>We load the OpenAI Measurement Pixel only after you choose <strong>Accept tracking</strong>. It measures accepted enquiries using a lead_created event. The event fields we supply contain only the action type, not your name, phone number, postcode or message.</p>
+        <p>The Pixel may also automatically detect supported customer information entered on this website for advanced matching. It normalises and hashes supported information in your browser using SHA-256 before including the hashes with conversion events; raw customer information is not sent through this automatic matching process. Hashing does not make this information anonymous. This processing helps OpenAI match enquiries to advertisements and is covered by your optional advertising measurement consent.</p>
+        <p>When consent is granted, the Pixel uses first-party cookies: <strong>__oppref</strong> stores an OpenAI ad click reference for up to 30 days after it is captured, and <strong>__obref</strong> stores a random browser reference for up to 365 days after creation. Browser restrictions or clearing cookies can shorten these periods. Cookie lifetimes are not the same as OpenAI's data retention or conversion attribution windows. See <a href="https://developers.openai.com/ads/measurement-pixel">OpenAI's Measurement Pixel documentation</a> and <a href="https://openai.com/policies/privacy-policy/">OpenAI's Privacy Policy</a>.</p>
+        <p>With consent, we keep the advertisement's <strong>utm_content</strong> code in this tab's session storage as <strong>sbp-ad-code</strong>, carry it between our pages, and include it as <strong>Ad code</strong> in your Formspree enquiry. This lets us identify the advertisement that generated an enquiry. The stored code is removed when you decline tracking or the browser session ends; a code already delivered with an enquiry remains part of that enquiry.</p>
+        <p>Your accept or decline choice is stored on this device in local storage as <strong>sbp-ad-consent-v1</strong> until you change it or clear site data. Use <strong>Cookie settings</strong> on any page to change your choice. Declining prevents the Pixel from loading on subsequent pages. Withdrawing consent stops further measurement, removes the Pixel's attribution cookies and clears the stored ad code. Withdrawal does not undo information already sent. You can still send an enquiry with tracking declined.</p>
+
+        <h2>7. Contact Us</h2>
         <p>If you have any questions about this privacy policy or our privacy practices, please contact us via the form below or using our official contact details in the footer.</p>
     </div>
 </div>
